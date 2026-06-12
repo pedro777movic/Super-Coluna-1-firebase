@@ -451,7 +451,7 @@ export default function SuperColunaLanding() {
                 <div className="space-y-10">
                   {[
                     { 
-                      s: "1. Entre no programa", 
+                      s: "1. Entre no aplicativo", 
                       d: "Saiba exatamente o que fazer. Sem dúvidas ou confusão mental.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     },
