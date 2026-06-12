@@ -224,7 +224,7 @@ export default function SuperColunaLanding() {
               É o fato de você começar a considerá-la <span className="text-slate-900 font-bold">normal.</span>
             </p>
             <p className="text-lg text-muted-foreground">
-              Viver se adaptando a restrições rouba sua liberdade aos aos poucos. Mas adaptar-se à limitação não é o mesmo que resolvê-la.
+              Viver se adaptando a restrições rouba sua liberdade pouco a pouco. Adaptar-se à limitação não é o mesmo que resolvê-la.
             </p>
           </div>
         </section>
