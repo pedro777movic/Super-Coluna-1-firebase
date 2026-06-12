@@ -179,7 +179,7 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        <SectionMarker step={1} label="Identificação" />
+        <SectionMarker step={1} label="" />
 
         {/* STATE 2: Curiosity (Symptoms) */}
         <section className="bg-ghost-grey py-24">
