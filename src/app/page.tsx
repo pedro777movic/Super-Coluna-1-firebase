@@ -94,7 +94,7 @@ export default function SuperColunaLanding() {
       <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground mb-1">
         ETAPA {step}
       </span>
-      {label && <span className="text-xs font-medium">{label}</span>}
+      {label && <span className="text-sm font-medium">{label}</span>}
     </div>
   );
 
@@ -195,7 +195,7 @@ export default function SuperColunaLanding() {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Acorda sentindo o corpo travado e demora para 'aquecer'",
+                "Acorda sentindo o corpo rígido e demora para 'aquecer'",
                 "Precisa mudar de posição constantemente para encontrar conforto",
                 "Evita alguns movimentos porque sabe que vai sentir desconforto",
                 "Sente que sua mobilidade já não é a mesma de antes",
