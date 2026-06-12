@@ -382,7 +382,7 @@ export default function SuperColunaLanding() {
             </div>
             <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
               <p className="text-slate-900 font-medium">
-                Talvez você não precise continuar vivendo assim. E se o retorno à leveza fosse uma questão de consistência guiada?
+                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de consistência guiada?
               </p>
             </div>
           </div>
