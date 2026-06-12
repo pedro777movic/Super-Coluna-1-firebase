@@ -377,7 +377,7 @@ export default function SuperColunaLanding() {
                 Ela precisa de uma <span className="text-slate-900 font-bold">direção.</span>
               </p>
               <p>
-                Porque conhecimento sem prática consistente não muda nada. O problema não é a falta de informação, mas a sensação crescente de limitação que o corpo impõe quando não recebe os estímulos certos.
+                Porque dicas sem prática consistente não muda nada. O problema não é a falta de informação, mas a sensação crescente de limitação que o corpo impõe quando não recebe os estímulos certos.
               </p>
             </div>
             <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
