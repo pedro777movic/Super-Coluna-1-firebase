@@ -1,0 +1,47 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-mockup",
+      "description": "Premium health app mockup showing spinal health data",
+      "imageUrl": "https://picsum.photos/seed/coluna1/800/1200",
+      "imageHint": "mobile app health"
+    },
+    {
+      "id": "symptom-back-pain",
+      "description": "Abstract visual representing lower back discomfort",
+      "imageUrl": "https://picsum.photos/seed/coluna2/600/400",
+      "imageHint": "back pain"
+    },
+    {
+      "id": "app-home",
+      "description": "Dashboard view of the Super Coluna app",
+      "imageUrl": "https://picsum.photos/seed/coluna3/400/800",
+      "imageHint": "app dashboard"
+    },
+    {
+      "id": "app-evolution",
+      "description": "Evolution chart in the mobile app",
+      "imageUrl": "https://picsum.photos/seed/coluna4/400/800",
+      "imageHint": "health progress"
+    },
+    {
+      "id": "app-achievements",
+      "description": "Gamification and achievements screen",
+      "imageUrl": "https://picsum.photos/seed/coluna5/400/800",
+      "imageHint": "gamification awards"
+    },
+    {
+      "id": "app-profile",
+      "description": "User profile and settings screen",
+      "imageUrl": "https://picsum.photos/seed/coluna6/400/800",
+      "imageHint": "user profile"
+    },
+    {
+      "id": "recovery-path",
+      "description": "Abstract path showing recovery and wellness",
+      "imageUrl": "https://picsum.photos/seed/coluna7/800/400",
+      "imageHint": "recovery journey"
+    }
+  ]
+}
