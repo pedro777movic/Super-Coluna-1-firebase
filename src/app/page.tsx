@@ -534,7 +534,7 @@ export default function SuperColunaLanding() {
                   Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
                 <p className="text-lg text-white/70">
-                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
+                  O SUPER COLUNA foi criado para você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
                 </p>
               </div>
             </div>
