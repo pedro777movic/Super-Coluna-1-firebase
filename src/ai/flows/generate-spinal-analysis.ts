@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview This file implements a Genkit flow to generate a personalized spinal analysis for a user.
@@ -43,8 +44,9 @@ const personalizedSpinalAnalysisPrompt = ai.definePrompt({
   - Routine Impact: {{{routineImpact}}}
 
   Generate a personalized, premium analysis. Focus on the "Cycle of the Resting Back" (O ciclo da lombar que nunca descansa).
-  Keep it empathetic, non-medical, and encouraging. Focus on consistency and the benefits of a guided routine.
-  The tone should be sophisticated and premium.`,
+  Keep it empathetic, conversational, and deeply reflective. 
+  Address how the body starts to adapt to stiffness and how that steals quality of life.
+  The tone should be sophisticated, premium, and welcoming, making the user feel seen and understood.`,
 });
 
 const personalizedSpinalAnalysisFlow = ai.defineFlow(
