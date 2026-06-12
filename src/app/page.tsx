@@ -221,7 +221,7 @@ export default function SuperColunaLanding() {
               O pior não é a rigidez.
             </h2>
             <p className="text-2xl text-muted-foreground leading-relaxed">
-              É o fato de você estar começando a considerá-la <span className="text-slate-900 font-bold">normal.</span>
+              É o fato de você começar a considerá-la <span className="text-slate-900 font-bold">normal.</span>
             </p>
             <p className="text-lg text-muted-foreground">
               Viver se adaptando a restrições rouba sua liberdade aos aos poucos. Mas adaptar-se à limitação não é o mesmo que resolvê-la.
