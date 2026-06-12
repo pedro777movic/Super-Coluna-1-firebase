@@ -155,7 +155,7 @@ export default function SuperColunaLanding() {
                 <span>RECONECTE-SE COM SEU CORPO</span>
               </div>
               <h1 className="font-headline text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
-                Sua lombar não deveria ser a primeira coisa em que você pensa ao <span className="text-primary">acordar.</span>
+                Sua lombar está roubando mais da sua vida do que você imagina.
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Talvez você tenha começado a adaptar sua vida a esse desconforto sem perceber. Mas recuperar a liberdade de se mover não precisa ser complicado.
@@ -398,7 +398,7 @@ export default function SuperColunaLanding() {
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Desenvolvemos um sistema que ajuda a eliminar o desconforto através de exercícios que focam no resultado.
+                Desenvolvemos um sistema que ajuda a eliminar as dor lombar a partir de exercícios consistentes sem esforço.
               </p>
             </div>
 
