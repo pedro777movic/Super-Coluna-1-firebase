@@ -156,7 +156,7 @@ export default function SuperColunaLanding() {
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Talvez você tenha começado com um pequeno desconforto. Até que sem perceber você começou a adaptar sua vida à sua lombar que causa cada vez mais dores e desconfortos. A boa notícia? Você pode mudar isso agora mesmo.
+                Talvez tenha começado com um pequeno desconforto. Até que sem perceber você começou a adaptar sua vida à sua lombar que causa cada vez mais dores. A boa notícia? Você pode mudar isso agora mesmo.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Button size="lg" className="h-16 px-10 text-lg font-bold rounded-full group shadow-xl shadow-primary/20" onClick={handleStartQuiz}>
@@ -182,7 +182,7 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        <SectionMarker step={1} />
+        <SectionMarker step={1} label="" />
 
         {/* SYMPTOMS */}
         <section className="bg-ghost-grey py-24">
@@ -224,7 +224,7 @@ export default function SuperColunaLanding() {
               É o fato de você estar começando a considerá-la <span className="text-slate-900 font-bold">normal.</span>
             </p>
             <p className="text-lg text-muted-foreground">
-              Viver se adaptando a restrições rouba sua liberdade aos poucos. Mas adaptar-se à limitação não é o mesmo que resolvê-la.
+              Viver se adaptando a restrições rouba sua liberdade aos aos poucos. Mas adaptar-se à limitação não é o mesmo que resolvê-la.
             </p>
           </div>
         </section>
@@ -534,7 +534,7 @@ export default function SuperColunaLanding() {
                   Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
                 <p className="text-lg text-white/70">
-                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar with more confidence.
+                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
                 </p>
               </div>
             </div>
