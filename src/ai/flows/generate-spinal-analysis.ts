@@ -11,21 +11,20 @@ import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 
 const PersonalizedSpinalAnalysisInputSchema = z.object({
-  symptoms: z.array(z.string()).describe('A list of symptoms reported by the user, e.g., "lower back pain", "stiffness in the morning", "poor posture".'),
-  lifestyleFactors: z.array(z.string()).describe('Relevant lifestyle factors reported by the user, e.g., "sedentary job", "frequent heavy lifting", "stress".'),
-  quizSummary: z.string().describe('A summarized text description of the user\u0027s quiz results and key findings related to their spinal health.'),
+  mainDiscomfort: z.string().describe('The primary discomfort reported by the user.'),
+  duration: z.string().describe('How long the user has been experiencing the discomfort.'),
+  routineImpact: z.string().describe('How much the discomfort interferes with the user\'s daily routine.'),
 });
 export type PersonalizedSpinalAnalysisInput = z.infer<typeof PersonalizedSpinalAnalysisInputSchema>;
 
 const PersonalizedSpinalAnalysisOutputSchema = z.object({
-  empathyStatement: z.string().describe('An empathetic statement acknowledging the user\u0027s pain and validating their experience, e.g., "Many people experience similar discomforts, and it\u0027s completely understandable to feel concerned."'),
-  currentConditionSummary: z.string().describe('A personalized, concise summary of the user\u0027s perceived spinal health condition and discomfort based on the quiz data.'),
+  empathyStatement: z.string().describe('An empathetic statement acknowledging the user\'s situation.'),
+  currentConditionSummary: z.string().describe('A personalized summary of their "lombar cycle" based on the quiz.'),
   identifiedProblems: z.array(z.object({
-    problem: z.string().describe('A specific problem identified, e.g., "Poor Posture", "Sedentary Lifestyle", "Muscle Imbalance".'),
-    description: z.string().describe('A brief explanation of how this problem contributes to their discomfort.'),
-  })).describe('A list of specific problems or potential root causes identified from the user\u0027s input.'),
-  superColunaApproach: z.string().describe('A brief explanation of how SUPER COLUNA\u0027s features and methodology can effectively address the identified problems and lead to recovery and improved quality of life.'),
-  keyVisualConcepts: z.array(z.string()).describe('A list of keywords or short phrases suggesting visual elements to accompany the analysis, e.g., "slouching figure icon", "timeline of recovery", "strength-building graphic". These are suggestions for the UI to interpret.'),
+    problem: z.string(),
+    description: z.string(),
+  })).describe('Specific identified issues based on their input.'),
+  superColunaApproach: z.string().describe('How SUPER COLUNA addresses these specific issues.'),
 });
 export type PersonalizedSpinalAnalysisOutput = z.infer<typeof PersonalizedSpinalAnalysisOutputSchema>;
 
@@ -37,7 +36,15 @@ const personalizedSpinalAnalysisPrompt = ai.definePrompt({
   name: 'personalizedSpinalAnalysisPrompt',
   input: { schema: PersonalizedSpinalAnalysisInputSchema },
   output: { schema: PersonalizedSpinalAnalysisOutputSchema },
-  prompt: `You are an expert in spinal health and rehabilitation, acting as a compassionate AI assistant for the "SUPER COLUNA" premium mobile app. Your goal is to provide a personalized diagnostic overview based on user-provided quiz data.\n\nThe user has completed a diagnostic quiz and reported the following:\nSymptoms: {{#each symptoms}}- {{{this}}}\n{{/each}}Lifestyle Factors: {{#each lifestyleFactors}}- {{{this}}}\n{{/each}}Quiz Summary: {{{quizSummary}}}\n\nYour task is to generate a comprehensive analysis in a premium, modern, and empathetic tone, avoiding medical jargon where possible. Focus on making the user feel understood and showing how SUPER COLUNA is tailored to their specific needs.\n\nBased on the provided information, output a structured JSON response containing:\n1. An empathetic opening statement.\n2. A concise summary of the user's current spinal health condition.\n3. A list of identified problems or potential root causes, each with a brief explanation.\n4. An explanation of how SUPER COLUNA's approach directly addresses these problems.\n5. A list of key visual concepts that can accompany this analysis in a UI, making it more engaging and understandable.\n\nEnsure the output adheres strictly to the defined JSON schema.`,
+  prompt: `You are an expert in spinal health for the "SUPER COLUNA" app.
+  The user reported:
+  - Main Discomfort: {{{mainDiscomfort}}}
+  - Duration: {{{duration}}}
+  - Routine Impact: {{{routineImpact}}}
+
+  Generate a personalized, premium analysis. Focus on the "Cycle of the Resting Back" (O ciclo da lombar que nunca descansa).
+  Keep it empathetic, non-medical, and encouraging. Focus on consistency and the benefits of a guided routine.
+  The tone should be sophisticated and premium.`,
 });
 
 const personalizedSpinalAnalysisFlow = ai.defineFlow(
