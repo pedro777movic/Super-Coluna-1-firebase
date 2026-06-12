@@ -301,6 +301,7 @@ export default function SuperColunaLanding() {
                             {["Sim, bastante", "Às vezes", "Ainda pouco"].map(opt => (
                               <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-lg hover:border-primary group text-left" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
+                                {opt}
                                 <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100" />
                               </Button>
                             ))}
@@ -419,7 +420,7 @@ export default function SuperColunaLanding() {
                 }
               ].map((feature, i) => (
                 <Card key={i} className="border-none shadow-premium bg-white p-10 rounded-[2.5rem] space-y-6 hover:-translate-y-2 transition-transform">
-                  <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+                  <div className="pointer-events-none w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-2xl">{feature.t}</h3>
@@ -461,7 +462,7 @@ export default function SuperColunaLanding() {
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     },
                     { 
-                      s: "3. Acompanhe sua evolução", 
+                      s: "3. Sinta sua evolução", 
                       d: "Veja seu progresso acontecer e sinta seu corpo responder a cada dia.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     }
