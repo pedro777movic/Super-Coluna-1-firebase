@@ -155,7 +155,7 @@ export default function SuperColunaLanding() {
                 <span>RECONECTE-SE COM SEU CORPO</span>
               </div>
               <h1 className="font-headline text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
-                Sua lombar está roubando mais da sua vida do que você imagina.
+                Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Talvez você tenha começado a adaptar sua vida a esse desconforto sem perceber. Mas recuperar a liberdade de se mover não precisa ser complicado.
