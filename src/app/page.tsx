@@ -301,7 +301,6 @@ export default function SuperColunaLanding() {
                             {["Sim, bastante", "Às vezes", "Ainda pouco"].map(opt => (
                               <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-lg hover:border-primary group text-left" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
-                                {opt}
                                 <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100" />
                               </Button>
                             ))}
@@ -490,7 +489,7 @@ export default function SuperColunaLanding() {
             <div className="space-y-8 text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
               <p className="font-medium text-slate-900">Sem ficar pensando na lombar o tempo inteiro.</p>
-              <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas pode começar a se sentir muito melhor do que se sente hoje.</p>
+              <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas vai começar a se sentir muito melhor do que se sente hoje.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8 text-left max-w-3xl mx-auto pt-8">
               <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-sm">
