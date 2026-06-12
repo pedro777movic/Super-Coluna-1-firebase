@@ -43,7 +43,6 @@ export default function SuperColunaLanding() {
   
   // -- Images --
   const heroImg = PlaceHolderImages?.find(img => img.id === "hero-mockup")?.imageUrl;
-  const symptomImg = PlaceHolderImages?.find(img => img.id === "symptom-back-pain")?.imageUrl;
   const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
 
   useEffect(() => {
@@ -157,7 +156,7 @@ export default function SuperColunaLanding() {
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Talvez você tenha começado a adaptar sua vida a esse desconforto sem perceber. Mas recuperar a liberdade de se mover não precisa ser complicado.
+                Talvez você tenha começado com um pequeno desconforto. Até que sem perceber você começou a adaptar sua vida à sua lombar que causa cada vez mais dores e desconfortos. A boa notícia? Você pode mudar isso agora mesmo.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Button size="lg" className="h-16 px-10 text-lg font-bold rounded-full group shadow-xl shadow-primary/20" onClick={handleStartQuiz}>
