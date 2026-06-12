@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -413,7 +412,7 @@ export default function SuperColunaLanding() {
                     A maioria das pessoas acredita que está cuidando da lombar fazendo alongamentos esporádicos ou seguindo dicas soltas da internet.
                   </p>
                   <p>
-                    Mas a verdade é que o problema não é a falta de informação. O problema é a <strong>sensação crescente de limitação</strong>.
+                    Mas a verdade é que o problem não é a falta de informação. O problema é a <strong>sensação crescente de limitação</strong>.
                   </p>
                   <p className="text-slate-900 font-medium">
                     Sem um caminho consistente, seu corpo continua recebendo exatamente os mesmos estímulos que criaram o desconforto original.
@@ -453,7 +452,7 @@ export default function SuperColunaLanding() {
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Desenvolvemos um sistema que elimina a confusão mental e foca no que realmente traz liberdade: a consistência sem esforço.
+                Desenvolvemos um sistema que ajuda a eliminar as dor lombar a partir de exercícios consistentes sem esforço.
               </p>
             </div>
 
