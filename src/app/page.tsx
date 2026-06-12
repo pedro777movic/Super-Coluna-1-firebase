@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -152,7 +151,7 @@ export default function SuperColunaLanding() {
           <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-wide">
-                <span>RECONECTE-SE COM SEU CORPO</span>
+                <span>SUPER COLUNA</span>
               </div>
               <h1 className="font-headline text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
@@ -536,7 +535,7 @@ export default function SuperColunaLanding() {
                   Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
                 <p className="text-lg text-white/70">
-                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
+                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar with more confidence.
                 </p>
               </div>
             </div>
