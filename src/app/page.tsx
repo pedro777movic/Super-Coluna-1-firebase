@@ -396,7 +396,7 @@ export default function SuperColunaLanding() {
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Desenvolvemos um sistema que ajuda a eliminar as dor lombar a partir de exercícios consistentes sem esforço.
+                Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios consistentes sem esforço.
               </p>
             </div>
 
