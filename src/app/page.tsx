@@ -130,7 +130,6 @@ export default function SuperColunaLanding() {
           <div className="hidden md:flex gap-8 items-center">
             <nav className="flex gap-6 text-sm font-semibold text-muted-foreground">
               <a href="#how-it-works" className="hover:text-primary transition-colors">Como Funciona</a>
-              <a href="#benefits" className="hover:text-primary transition-colors">Diferenciais</a>
             </nav>
             <Button size="sm" className="rounded-full px-6" onClick={handleStartQuiz}>Avaliação Gratuita</Button>
           </div>
@@ -207,6 +206,8 @@ export default function SuperColunaLanding() {
             </div>
           </div>
         </section>
+
+        <SectionMarker step={2} label="A Causa" />
 
         {/* STATE 3: Discovery (The Quiz) */}
         <section id="quiz-section" className="py-24 bg-white relative">
