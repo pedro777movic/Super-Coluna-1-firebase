@@ -20,7 +20,7 @@ export type PersonalizedSpinalAnalysisInput = z.infer<typeof PersonalizedSpinalA
 
 const PersonalizedSpinalAnalysisOutputSchema = z.object({
   empathyStatement: z.string().describe('An empathetic statement acknowledging the user\'s situation.'),
-  currentConditionSummary: z.string().describe('A personalized summary of their "lombar cycle" based on the quiz.'),
+  currentConditionSummary: z.string().describe('A personalized summary of their condition based on the quiz.'),
   identifiedProblems: z.array(z.object({
     problem: z.string(),
     description: z.string(),
@@ -43,10 +43,10 @@ const personalizedSpinalAnalysisPrompt = ai.definePrompt({
   - Duration: {{{duration}}}
   - Routine Impact: {{{routineImpact}}}
 
-  Generate a personalized, premium analysis. Focus on the "Cycle of the Resting Back" (O ciclo da lombar que nunca descansa).
-  Keep it empathetic, conversational, and deeply reflective. 
+  Generate a personalized, premium analysis. Focus on the concept that living with discomfort should not be considered "normal".
   Address how the body starts to adapt to stiffness and how that steals quality of life.
-  The tone should be sophisticated, premium, and welcoming, making the user feel seen and understood.`,
+  The tone should be sophisticated, premium, and deeply empathetic, making the user feel seen and understood.
+  Avoid medical diagnosis; focus on behavioral patterns and the emotional relief of recovery.`,
 });
 
 const personalizedSpinalAnalysisFlow = ai.defineFlow(

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -45,7 +46,6 @@ export default function SuperColunaLanding() {
   const heroImg = PlaceHolderImages?.find(img => img.id === "hero-mockup")?.imageUrl;
   const symptomImg = PlaceHolderImages?.find(img => img.id === "symptom-back-pain")?.imageUrl;
   const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
-  const evolutionImg = PlaceHolderImages?.find(img => img.id === "app-evolution")?.imageUrl;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -147,7 +147,7 @@ export default function SuperColunaLanding() {
 
       <main className="pt-16">
         
-        {/* STATE 1: Identification (Hero) */}
+        {/* HERO */}
         <section className="relative overflow-hidden bg-white py-20 lg:py-32">
           <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10 text-center lg:text-left">
@@ -155,10 +155,10 @@ export default function SuperColunaLanding() {
                 <span>RECONECTE-SE COM SEU CORPO</span>
               </div>
               <h1 className="font-headline text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
-                Sua lombar está roubando mais da sua vida do que <span className="text-primary">você imagina.</span>
+                Sua lombar não deveria ser a primeira coisa em que você pensa ao <span className="text-primary">acordar.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Talvez tenha começado com uma rigidez ao acordar ou um incômodo após horas sentado. Nada grave, até que você percebe que parou de se movimentar com a liberdade que tinha antes.
+                Talvez você tenha começado a adaptar sua vida a esse desconforto sem perceber. Mas recuperar a liberdade de se mover não precisa ser complicado.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Button size="lg" className="h-16 px-10 text-lg font-bold rounded-full group shadow-xl shadow-primary/20" onClick={handleStartQuiz}>
@@ -186,25 +186,22 @@ export default function SuperColunaLanding() {
 
         <SectionMarker step={1} />
 
-        {/* STATE 2: Identification (Expanded Symptoms) */}
+        {/* SYMPTOMS */}
         <section className="bg-ghost-grey py-24">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold text-slate-900">Isso soa familiar para você?</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Muitas vezes, a lombar não grita; ela apenas sussurra, mudando a forma como você vive o seu dia a dia.
+                Quando a lombar reclama, ela muda silenciosamente a forma como você vive o seu dia.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Você levanta da cama mais devagar do que gostaria, esperando o corpo 'aquecer'",
-                "Sente uma rigidez estranha após apenas 30 minutos na mesma posição",
-                "Percebe que sua mobilidade já não permite movimentos que antes eram naturais",
-                "Evita pegar peso ou fazer certos movimentos por medo de 'travar'",
-                "Sente a lombar reclamar silenciosamente após dirigir ou ficar sentado",
-                "Já tentou algumas soluções, mas a falta de um caminho claro te fez desistir no meio",
-                "Percebe que seu corpo está perdendo aquela sensação de leveza e soltura",
-                "Sente que está sempre 'compensando' a postura para evitar o incômodo"
+                "Acorda sentindo o corpo travado e demora para 'aquecer'",
+                "Precisa mudar de posição constantemente para encontrar conforto",
+                "Evita alguns movimentos porque sabe que vai sentir desconforto",
+                "Sente que sua mobilidade já não é a mesma de antes",
+                "Tem a sensação de que está se adaptando cada vez mais às limitações"
               ].map((text, i) => (
                 <div key={i} className="flex gap-4 p-8 bg-white rounded-3xl shadow-sm border border-border/50 items-start hover:border-primary/30 transition-all hover:shadow-md">
                   <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-0.5">
@@ -217,56 +214,26 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        <SectionMarker step={2} label="A Adaptação Invisível" />
+        <SectionMarker step={2} />
 
-        {/* NEW SECTION: The Danger of Invisible Adaptation */}
+        {/* INVISIBLE ADAPTATION */}
         <section className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <h2 className="font-headline text-4xl font-bold text-slate-900 leading-tight">
-                  Você começou a se adaptar sem perceber.
-                </h2>
-                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    Se acostumou a levantar mais devagar. Se acostumou a procurar posições mais confortáveis. Se acostumou a sentir a lombar reclamar.
-                  </p>
-                  <p className="font-medium text-slate-900">
-                    O perigo é que, quando algo vira rotina, você para de notar o quanto aquilo está roubando da sua qualidade de vida e da sua liberdade.
-                  </p>
-                  <p>
-                    O corpo humano é mestre em se adaptar às limitações. Mas adaptar-se à restrição não é o mesmo que resolvê-la.
-                  </p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-primary/5 rounded-[3rem] p-8 lg:p-12 border border-primary/10">
-                  <div className="space-y-8">
-                    <div className="flex gap-4 items-center">
-                      <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary">
-                        <TrendingUp className="w-6 h-6" />
-                      </div>
-                      <span className="font-bold text-slate-800">O Ciclo da Adaptação</span>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-primary w-[40%] transition-all duration-1000" />
-                      </div>
-                      <p className="text-sm font-medium text-slate-500">Nível de Rigidez Acumulada</p>
-                    </div>
-                    <p className="text-sm italic text-slate-500">
-                      "A rigidez que você sente hoje é apenas o reflexo de meses de adaptações silenciosas do seu corpo."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="container mx-auto px-4 max-w-3xl text-center space-y-8">
+            <h2 className="font-headline text-4xl font-bold text-slate-900 leading-tight">
+              O pior não é a rigidez.
+            </h2>
+            <p className="text-2xl text-muted-foreground leading-relaxed">
+              É o fato de você estar começando a considerá-la <span className="text-slate-900 font-bold">normal.</span>
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Viver se adaptando a restrições rouba sua liberdade aos poucos. Mas adaptar-se à limitação não é o mesmo que resolvê-la.
+            </p>
           </div>
         </section>
 
         <SectionMarker step={3} label="Descoberta" />
 
-        {/* STATE 3: Discovery (The Quiz) */}
+        {/* QUIZ */}
         <section id="quiz-section" className="py-24 bg-ghost-grey relative">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-12 space-y-4">
@@ -382,7 +349,7 @@ export default function SuperColunaLanding() {
                         <TrendingUp className="w-4 h-4" /> DIAGNÓSTICO DE COMPORTAMENTO:
                       </h4>
                       <p className="text-slate-700 leading-relaxed text-lg">
-                        Seu perfil indica que você está no <strong>"Ciclo da Lombar que Nunca Descansa"</strong>. O corpo entra em um estado de alerta constante, onde cada movimento é calculado para evitar o incômodo, o que acaba gerando ainda mais rigidez.
+                        Seu perfil indica que você está no <strong>"Ciclo da Lombar que Nunca Descansa"</strong>. O corpo entra em um estado de alerta onde cada movimento é calculado para evitar o incômodo, o que gera ainda mais rigidez.
                       </p>
                     </div>
 
@@ -399,78 +366,57 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        <SectionMarker step={4} label="A Revelação" />
+        <SectionMarker step={4} />
 
-        {/* STATE 4: Relief (Revelation - Expanded & Emotional) */}
+        {/* REVELATION */}
         <section id="revelation" className="py-24 bg-white">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="space-y-10">
-                <h2 className="font-headline text-4xl font-bold text-slate-900 leading-tight">O que realmente está acontecendo</h2>
-                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    A maioria das pessoas acredita que está cuidando da lombar fazendo alongamentos esporádicos ou seguindo dicas soltas da internet.
-                  </p>
-                  <p>
-                    Mas a verdade é que o problem não é a falta de informação. O problema é a <strong>sensação crescente de limitação</strong>.
-                  </p>
-                  <p className="text-slate-900 font-medium">
-                    Sem um caminho consistente, seu corpo continua recebendo exatamente os mesmos estímulos que criaram o desconforto original.
-                  </p>
-                  <p>
-                    O resultado? Nada muda de verdade, e você continua se sentindo cada vez mais refém das restrições do seu próprio corpo.
-                  </p>
-                </div>
-                <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
-                  <p className="font-bold text-slate-800 text-xl mb-2">A Ponte de Esperança</p>
-                  <p className="text-muted-foreground">
-                    E se você não precisasse mais continuar vivendo assim? E se o retorno à leveza fosse uma questão de consistência guiada, e não de esforço hercúleo?
-                  </p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5] relative group border-[12px] border-white">
-                  <Image 
-                    src={symptomImg || "https://picsum.photos/seed/coluna2/600/400"} 
-                    alt="Desconforto Lombar" 
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    data-ai-hint="back pain"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
-                </div>
-              </div>
+          <div className="container mx-auto px-4 max-w-3xl text-center space-y-10">
+            <h2 className="font-headline text-4xl font-bold text-slate-900 leading-tight">
+              Sua lombar não precisa de mais dicas.
+            </h2>
+            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
+              <p>
+                Ela precisa de uma <span className="text-slate-900 font-bold">direção.</span>
+              </p>
+              <p>
+                Porque conhecimento sem prática consistente não muda nada. O problema não é a falta de informação, mas a sensação crescente de limitação que o corpo impõe quando não recebe os estímulos certos.
+              </p>
+            </div>
+            <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
+              <p className="text-slate-900 font-medium">
+                Talvez você não precise continuar vivendo assim. E se o retorno à leveza fosse uma questão de consistência guiada?
+              </p>
             </div>
           </div>
         </section>
 
         <SectionMarker step={5} label="A Solução" />
 
-        {/* STATE 5: Hope (Solution - Expanded) */}
+        {/* SOLUTION */}
         <section className="py-24 bg-ghost-grey">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Desenvolvemos um sistema que ajuda a eliminar as dor lombar a partir de exercícios consistentes sem esforço.
+                Desenvolvemos um sistema que ajuda a eliminar o desconforto através de exercícios que focam no resultado.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
               {[
                 { 
-                  t: "Programa 30 Dias", 
-                  d: "Uma jornada estruturada para criar o hábito sem sobrecarga. Você nunca mais precisará adivinhar o que fazer.", 
-                  icon: <Calendar className="w-6 h-6" /> 
+                  t: "Mais mobilidade", 
+                  d: "Volte a se mover com mais confiança e menos rigidez. Recupere movimentos que antes eram naturais.", 
+                  icon: <Zap className="w-6 h-6" /> 
                 },
                 { 
-                  t: "Clareza Absoluta", 
-                  d: "Vídeos rápidos e práticos. Sem excesso de teoria ou academia. Poucos minutos por dia para resultados reais.", 
+                  t: "Mais leveza", 
+                  d: "Sinta seu corpo responder melhor aos movimentos do dia a dia. Menos esforço para fazer o simples.", 
                   icon: <Sparkles className="w-6 h-6" /> 
                 },
                 { 
-                  t: "Liberdade Mental", 
-                  d: "O app decide por você. Menos carga de decisão, mais continuidade e uma sensação real de alívio e progresso.", 
+                  t: "Mais liberdade", 
+                  d: "Passe menos tempo pensando na lombar e mais tempo vivendo sua rotina. Livre do peso da restrição.", 
                   icon: <ShieldCheck className="w-6 h-6" /> 
                 }
               ].map((feature, i) => (
@@ -486,9 +432,9 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        <SectionMarker step={6} label="Experiência" />
+        <SectionMarker step={6} />
 
-        {/* STATE 6: Confidence (How it works - Expanded & Emotional) */}
+        {/* HOW IT WORKS */}
         <section id="how-it-works" className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -501,27 +447,24 @@ export default function SuperColunaLanding() {
                   className="rounded-[3rem] shadow-2xl border-[10px] border-white mx-auto max-w-[280px]"
                   data-ai-hint="app dashboard"
                 />
-                <div className="absolute -left-8 bottom-1/4 p-6 bg-white rounded-3xl shadow-xl animate-bounce">
-                  <Heart className="text-secondary w-8 h-8 fill-secondary" />
-                </div>
               </div>
               <div className="space-y-12 lg:order-1">
-                <h2 className="font-headline text-4xl font-bold leading-tight">Como é a jornada no app</h2>
+                <h2 className="font-headline text-4xl font-bold leading-tight">Simples e prático</h2>
                 <div className="space-y-10">
                   {[
                     { 
-                      s: "1. Alívio na decisão", 
-                      d: "Ao abrir o app, você sente um alívio imediato: o próximo passo está ali, pronto. Sem confusão, sem dúvidas.",
+                      s: "1. Entre no programa", 
+                      d: "Saiba exatamente o que fazer. Sem dúvidas ou confusão mental.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     },
                     { 
-                      s: "2. Clareza na prática", 
-                      d: "Exercícios simples, curtos e guiados. Você sente que finalmente encontrou algo que cabe na sua rotina real.",
+                      s: "2. Siga os exercícios", 
+                      d: "Poucos minutos por dia. Vídeos rápidos e guiados que cabem na sua rotina.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     },
                     { 
-                      s: "3. Progresso visível", 
-                      d: "Cada check-in gera uma sensação de conquista. Você vê sua evolução e sua confiança cresce a cada dia.",
+                      s: "3. Acompanhe sua evolução", 
+                      d: "Veja seu progresso acontecer e sinta seu corpo responder a cada dia.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     }
                   ].map((item, i) => (
@@ -539,34 +482,25 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        {/* NEW SECTION: Transformation (Imagine a new reality) */}
+        {/* TRANSFORMATION */}
         <section id="transformation" className="py-24 bg-ghost-grey">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="bg-slate-900 rounded-[3rem] p-12 lg:p-24 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-              
-              <div className="max-w-3xl space-y-12 relative z-10">
-                <div className="space-y-6">
-                  <h2 className="font-headline text-4xl lg:text-5xl font-bold leading-tight">Imagine sua vida com mais liberdade.</h2>
-                  <p className="text-xl text-white/70 leading-relaxed">
-                    Você volta a se movimentar com confiança. Sente uma leveza que há tempos não sentia. E o melhor: sua lombar deixa de ser o centro das suas atenções, permitindo que você foque no que realmente importa.
-                  </p>
-                </div>
-                
-                <div className="grid sm:grid-cols-2 gap-8">
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                      <Check className="w-5 h-5 text-secondary" />
-                    </div>
-                    <p className="text-lg font-medium">Volte a prestar menos atenção na dor e mais na vida.</p>
-                  </div>
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                      <Check className="w-5 h-5 text-secondary" />
-                    </div>
-                    <p className="text-lg font-medium">Sinta a confiança de um corpo que responde aos seus comandos.</p>
-                  </div>
-                </div>
+          <div className="container mx-auto px-4 max-w-4xl text-center space-y-12">
+            <h2 className="font-headline text-4xl lg:text-5xl font-bold leading-tight text-slate-900">
+              Imagine voltar a confiar no seu corpo.
+            </h2>
+            <div className="space-y-8 text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
+              <p className="font-medium text-slate-900">Sem ficar pensando na lombar o tempo inteiro.</p>
+              <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas pode começar a se sentir muito melhor do que se sente hoje.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-8 text-left max-w-3xl mx-auto pt-8">
+              <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-sm">
+                <Check className="w-6 h-6 text-secondary shrink-0" />
+                <p className="text-lg font-medium text-slate-700">Volte a focar na vida, não na dor.</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-sm">
+                <Check className="w-6 h-6 text-secondary shrink-0" />
+                <p className="text-lg font-medium text-slate-700">Recupere a leveza natural do corpo.</p>
               </div>
             </div>
           </div>
@@ -578,7 +512,7 @@ export default function SuperColunaLanding() {
             <h2 className="font-headline text-3xl font-bold text-center mb-12">Perguntas frequentes</h2>
             <Accordion type="single" collapsible className="space-y-4">
               {[
-                { q: "Isso substitui acompanhamento profissional?", a: "Não. O SUPER COLUNA é um programa digital de apoio voltado para mobilidade e fortalecimento. Em casos específicos ou persistentes, procure orientação profissional." },
+                { q: "Isso substitui acompanhamento profissional?", a: "Não. O SUPER COLUNA é um programa digital de apoio voltado para mobilidade e fortalecimento preventivo. Em casos específicos ou persistentes, procure orientação profissional." },
                 { q: "Preciso ter experiência com exercícios?", a: "Não. O programa foi desenvolvido para ser extremamente simples e intuitivo, feito para qualquer pessoa seguir." },
                 { q: "Quanto tempo por dia?", a: "Apenas alguns minutos. Nosso foco é facilitar a continuidade, não criar uma nova obrigação pesada." },
                 { q: "É um curso?", a: "Não. É um programa de acompanhamento diário dentro de um aplicativo premium, focado em jornada e consistência." }
@@ -592,21 +526,17 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        {/* STATE 7: Decision (Final CTA - Strengthened & Reflective) */}
+        {/* FINAL CTA */}
         <section className="py-32 bg-slate-900 text-white relative overflow-hidden text-center">
           <div className="container mx-auto px-4 max-w-4xl space-y-16 relative z-10">
             <div className="space-y-8">
-              <div className="w-20 h-20 rounded-full border-4 border-secondary flex items-center justify-center mx-auto bg-secondary/10">
-                <Check className="w-10 h-10 text-secondary" />
-              </div>
-              <p className="text-xs font-black tracking-widest text-secondary uppercase">DECISÃO DE JORNADA</p>
-              <h2 className="font-headline text-5xl lg:text-7xl font-bold leading-tight">Comece hoje.</h2>
+              <h2 className="font-headline text-5xl lg:text-7xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
               <div className="space-y-6 max-w-2xl mx-auto">
                 <p className="text-xl text-white/80 leading-relaxed">
-                  Sua lombar participa de praticamente todos os movimentos do seu dia. Ignorar o sinal que ela está enviando hoje é apenas adiar um cuidado que seu corpo já está pedindo.
+                  Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
-                <p className="text-lg text-white/50 italic">
-                  Daqui a 30 dias, você pode continuar como está agora, ou pode olhar para trás e agradecer por ter tomado essa decisão.
+                <p className="text-lg text-white/70">
+                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
                 </p>
               </div>
             </div>
