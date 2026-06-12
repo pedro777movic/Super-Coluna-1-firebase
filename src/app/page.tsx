@@ -528,7 +528,7 @@ export default function SuperColunaLanding() {
         <section className="py-32 bg-slate-900 text-white relative overflow-hidden text-center">
           <div className="container mx-auto px-4 max-w-4xl space-y-16 relative z-10">
             <div className="space-y-8">
-              <h2 className="font-headline text-5xl lg:text-7xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
+              <h2 className="font-headline text-5xl lg:text-7xl font-bold leading-tight">Quanto mais você adia, mas normal isso parece.</h2>
               <div className="space-y-6 max-w-2xl mx-auto">
                 <p className="text-xl text-white/80 leading-relaxed">
                   Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
@@ -559,7 +559,7 @@ export default function SuperColunaLanding() {
             <span className="font-headline font-bold">SUPER COLUNA</span>
           </div>
           <p className="text-xs text-muted-foreground max-w-md mx-auto">
-            Este programa é focado em mobilidade e fortalecimento preventivo. Resultados variam conforme a consistência. © 2024 Super Coluna.
+            Este aplicativo é focado em mobilidade e fortalecimento preventivo. Resultados variam conforme a consistência. © 2024 Super Coluna.
           </p>
         </div>
       </footer>
