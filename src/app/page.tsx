@@ -465,7 +465,7 @@ export default function SuperColunaLanding() {
                     },
                     { 
                       s: "3. Sinta sua evolução", 
-                      d: "Veja seu progresso acontecer e sinta seu corpo responder a cada dia.",
+                      d: "Sinta sua lombar melhorar e sinta seu corpo mais flexível e cada vez menos rígido a cada dia.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     }
                   ].map((item, i) => (
