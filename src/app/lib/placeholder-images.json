@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-mockup",
-      "description": "Premium health app mockup showing spinal health data",
-      "imageUrl": "https://picsum.photos/seed/coluna1/800/1200",
-      "imageHint": "mobile app health"
+      "description": "Premium health app mockup showing spinal health data in landscape orientation",
+      "imageUrl": "https://picsum.photos/seed/coluna1/1200/800",
+      "imageHint": "landscape health app"
     },
     {
       "id": "symptom-back-pain",
@@ -15,26 +15,26 @@
     },
     {
       "id": "app-home",
-      "description": "Dashboard view of the Super Coluna app",
-      "imageUrl": "https://picsum.photos/seed/coluna3/400/800",
-      "imageHint": "app dashboard"
+      "description": "Dashboard view of the Super Coluna app in landscape",
+      "imageUrl": "https://picsum.photos/seed/coluna3/1200/800",
+      "imageHint": "landscape dashboard"
     },
     {
       "id": "app-evolution",
       "description": "Evolution chart in the mobile app",
-      "imageUrl": "https://picsum.photos/seed/coluna4/400/800",
+      "imageUrl": "https://picsum.photos/seed/coluna4/800/400",
       "imageHint": "health progress"
     },
     {
       "id": "app-achievements",
       "description": "Gamification and achievements screen",
-      "imageUrl": "https://picsum.photos/seed/coluna5/400/800",
+      "imageUrl": "https://picsum.photos/seed/coluna5/800/400",
       "imageHint": "gamification awards"
     },
     {
       "id": "app-profile",
       "description": "User profile and settings screen",
-      "imageUrl": "https://picsum.photos/seed/coluna6/400/800",
+      "imageUrl": "https://picsum.photos/seed/coluna6/800/400",
       "imageHint": "user profile"
     },
     {
