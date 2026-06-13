@@ -455,7 +455,7 @@ export default function SuperColunaLanding() {
                   {[
                     { 
                       s: "1. Entre no aplicativo", 
-                      d: "Saiba exatamente o que fazer. Sem dúvidas ou confusão mental.",
+                      d: "Saiba exatamente o que fazer. Sem dúvidas sobre os exercícios que resolverão a dor lombar.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     },
                     { 
@@ -491,7 +491,7 @@ export default function SuperColunaLanding() {
             </h2>
             <div className="space-y-8 text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
-              <p className="font-medium text-slate-900">Sem ficar pensando na lombar o tempo inteiro.</p>
+              <p className="font-medium text-slate-900">Sem ficar sentindo a lombar o tempo inteiro.</p>
               <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas vai começar a se sentir muito melhor do que se sente hoje.</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-8 text-left max-w-3xl mx-auto pt-8">
