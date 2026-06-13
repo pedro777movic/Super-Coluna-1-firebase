@@ -156,7 +156,7 @@ export default function SuperColunaLanding() {
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Talvez tenha começado com um pequeno desconforto. Até que sem perceber você começou a adaptar sua vida à sua lombar que causa cada vez mais dores. A boa notícia? Você pode mudar isso agora mesmo.
+                A cada dia que passa, o desconforto parece mais normal. Mas viver com limitações não deveria fazer parte da sua rotina.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Button size="lg" className="h-16 px-10 text-lg font-bold rounded-full group shadow-xl shadow-primary/20" onClick={handleStartQuiz}>
@@ -300,6 +300,7 @@ export default function SuperColunaLanding() {
                           <div className="grid gap-3">
                             {["Sim, bastante", "Às vezes", "Ainda pouco"].map(opt => (
                               <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-lg hover:border-primary group text-left" onClick={() => handleQuizAnswer(opt)}>
+                                {opt}
                                 {opt}
                                 <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100" />
                               </Button>
