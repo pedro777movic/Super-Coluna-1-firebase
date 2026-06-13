@@ -45,6 +45,7 @@ export default function SuperColunaLanding() {
   // -- Images --
   const heroImg = PlaceHolderImages?.find(img => img.id === "hero-mockup")?.imageUrl;
   const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
+  const appEvolutionImg = PlaceHolderImages?.find(img => img.id === "app-evolution")?.imageUrl;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -486,23 +487,37 @@ export default function SuperColunaLanding() {
 
         {/* TRANSFORMATION */}
         <section id="transformation" className="py-16 bg-ghost-grey">
-          <div className="container mx-auto px-4 max-w-4xl text-center space-y-8">
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold leading-tight text-slate-900">
-              Imagine voltar a confiar no seu corpo.
-            </h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
-              <p className="font-medium text-slate-900">Sem ficar sentindo a lombar o tempo inteiro.</p>
-              <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas vai começar a se sentir muito melhor do que se sente hoje.</p>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto pt-6">
-              <div className="flex gap-3 items-start p-5 bg-white rounded-2xl shadow-sm">
-                <Check className="w-5 h-5 text-secondary shrink-0" />
-                <p className="text-md font-medium text-slate-700">Volte a focar na vida, not na dor.</p>
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8 text-center lg:text-left">
+                <h2 className="font-headline text-3xl lg:text-4xl font-bold leading-tight text-slate-900">
+                  Imagine voltar a confiar no seu corpo.
+                </h2>
+                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
+                  <p className="font-medium text-slate-900">Sem ficar sentindo a lombar o tempo inteiro.</p>
+                  <p>Sem aquela sensação constante de rigidez que limita sua vida. Talvez você não precise voltar anos no tempo, mas vai começar a se sentir muito melhor do que se sente hoje.</p>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4 text-left">
+                  <div className="flex gap-3 items-start p-5 bg-white rounded-2xl shadow-sm">
+                    <Check className="w-5 h-5 text-secondary shrink-0" />
+                    <p className="text-md font-medium text-slate-700">Volte a focar na vida, not na dor.</p>
+                  </div>
+                  <div className="flex gap-3 items-start p-5 bg-white rounded-2xl shadow-sm">
+                    <Check className="w-5 h-5 text-secondary shrink-0" />
+                    <p className="text-md font-medium text-slate-700">Recupere a leveza natural do corpo.</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-3 items-start p-5 bg-white rounded-2xl shadow-sm">
-                <Check className="w-5 h-5 text-secondary shrink-0" />
-                <p className="text-md font-medium text-slate-700">Recupere a leveza natural do corpo.</p>
+              <div className="relative">
+                <Image 
+                  src={appEvolutionImg || "https://picsum.photos/seed/coluna4/1200/800"} 
+                  alt="App Evolution Horizontal" 
+                  width={1200} 
+                  height={800} 
+                  className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-lg transition-all hover:scale-[1.02]"
+                  data-ai-hint="health progress"
+                />
               </div>
             </div>
           </div>
