@@ -374,10 +374,13 @@ export default function SuperColunaLanding() {
             </h2>
             <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
               <p>
-                Ela precisa de uma <span className="text-slate-900 font-bold">direção.</span>
+                Agora imagine ter um plano simples para começar a mudar isso.
               </p>
               <p>
-                Porque dicas sem prática consistente não muda nada. O problema não é a falta de informação, mas a sensação crescente de limitação que o corpo impõe quando não recebe os estímulos certos.
+                Você não precisa ficar procurando exercícios aleatórios ou tentando descobrir o que fazer a cada dia.
+              </p>
+              <p>
+                Tudo fica mais fácil quando existe um aplicativo claro para seguir.
               </p>
             </div>
             <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
