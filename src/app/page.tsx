@@ -90,8 +90,8 @@ export default function SuperColunaLanding() {
   };
 
   const SectionMarker = ({ step, label }: { step: number; label?: string }) => (
-    <div className="flex flex-col items-center justify-center py-8 lg:py-12 opacity-30">
-      <div className="h-10 w-px bg-border mb-4" />
+    <div className="flex flex-col items-center justify-center py-6 lg:py-8 opacity-30">
+      <div className="h-8 w-px bg-border mb-3" />
       <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground mb-1">
         ETAPA {step}
       </span>
@@ -147,13 +147,13 @@ export default function SuperColunaLanding() {
       <main className="pt-16">
         
         {/* HERO */}
-        <section className="relative overflow-hidden bg-white py-12 lg:py-24">
+        <section className="relative overflow-hidden bg-white py-12 lg:py-20">
           <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-wide">
                 <span>SUPER COLUNA</span>
               </div>
-              <h1 className="font-headline text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-slate-900">
+              <h1 className="font-headline text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-slate-900">
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -176,7 +176,7 @@ export default function SuperColunaLanding() {
                 alt="App Mockup Horizontal" 
                 width={1200} 
                 height={800}
-                className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-2xl"
+                className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-xl transition-all hover:scale-[1.02]"
                 data-ai-hint="landscape health app"
               />
             </div>
@@ -186,9 +186,9 @@ export default function SuperColunaLanding() {
         <SectionMarker step={1} label="" />
 
         {/* SYMPTOMS */}
-        <section className="bg-ghost-grey py-16">
+        <section className="bg-ghost-grey py-12 lg:py-16">
           <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-12 space-y-4">
+            <div className="text-center mb-10 space-y-4">
               <h2 className="font-headline text-3xl font-bold text-slate-900">Isso soa familiar para você?</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 Quando a lombar reclama, ela muda silenciosamente a forma como você vive o seu dia.
@@ -202,11 +202,11 @@ export default function SuperColunaLanding() {
                 "Sente que sua mobilidade já não é a mesma de antes",
                 "Tem a sensação de que está se adaptando cada vez mais às limitações"
               ].map((text, i) => (
-                <div key={i} className="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-border/50 items-start hover:border-primary/30 transition-all hover:shadow-md">
+                <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-border/50 items-start hover:border-primary/30 transition-all hover:shadow-md">
                   <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-0.5">
                     <Check className="w-4 h-4" />
                   </div>
-                  <p className="font-medium text-slate-700 leading-relaxed">{text}</p>
+                  <p className="font-medium text-slate-700 leading-relaxed text-sm lg:text-base">{text}</p>
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ export default function SuperColunaLanding() {
         <SectionMarker step={2} />
 
         {/* INVISIBLE ADAPTATION */}
-        <section className="py-16 bg-white overflow-hidden">
+        <section className="py-12 bg-white overflow-hidden">
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-6">
             <h2 className="font-headline text-3xl font-bold text-slate-900 leading-tight">
               O pior não é a rigidez.
@@ -233,9 +233,9 @@ export default function SuperColunaLanding() {
         <SectionMarker step={3} label="Descoberta" />
 
         {/* QUIZ */}
-        <section id="quiz-section" className="py-16 bg-ghost-grey relative">
+        <section id="quiz-section" className="py-12 bg-ghost-grey relative">
           <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-10 space-y-4">
+            <div className="text-center mb-8 space-y-4">
               <h2 className="font-headline text-3xl font-bold">Inicie sua avaliação pessoal</h2>
               <p className="text-muted-foreground">Entenda o perfil da sua lombar para descobrirmos o melhor caminho de retorno à mobilidade.</p>
             </div>
@@ -248,7 +248,7 @@ export default function SuperColunaLanding() {
                 />
               </div>
               
-              <CardContent className="p-8 lg:p-12">
+              <CardContent className="p-8 lg:p-10">
                 {quizStep === 0 && (
                   <div className="text-center space-y-6 animate-fade-in-up">
                     <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto text-primary">
@@ -368,7 +368,7 @@ export default function SuperColunaLanding() {
         <SectionMarker step={4} />
 
         {/* REVELATION */}
-        <section id="revelation" className="py-16 bg-white">
+        <section id="revelation" className="py-12 bg-white">
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-8">
             <h2 className="font-headline text-3xl font-bold text-slate-900 leading-tight">
               A boa notícia é que você não precisa resolver isso sozinho.
@@ -395,9 +395,9 @@ export default function SuperColunaLanding() {
         <SectionMarker step={5} label="A Solução" />
 
         {/* SOLUTION */}
-        <section className="py-16 bg-ghost-grey">
+        <section className="py-12 lg:py-16 bg-ghost-grey">
           <div className="container mx-auto px-4 max-w-6xl">
-            <div className="text-center mb-12 space-y-4">
+            <div className="text-center mb-10 space-y-4">
               <h2 className="font-headline text-3xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios simples de baixo esforço.
@@ -437,7 +437,7 @@ export default function SuperColunaLanding() {
         <SectionMarker step={6} />
 
         {/* HOW IT WORKS */}
-        <section id="how-it-works" className="py-16 bg-white">
+        <section id="how-it-works" className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative group lg:order-2">
@@ -446,13 +446,13 @@ export default function SuperColunaLanding() {
                   alt="App Interface Horizontal" 
                   width={1200} 
                   height={800} 
-                  className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-xl"
+                  className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-lg transition-all hover:scale-[1.02]"
                   data-ai-hint="landscape dashboard"
                 />
               </div>
               <div className="space-y-8 lg:order-1">
                 <h2 className="font-headline text-3xl font-bold leading-tight">Simples e prático</h2>
-                <div className="space-y-8">
+                <div className="space-y-6 lg:space-y-8">
                   {[
                     { 
                       s: "1. Entre no aplicativo", 
@@ -474,7 +474,7 @@ export default function SuperColunaLanding() {
                       <div className="shrink-0 mt-1">{item.icon}</div>
                       <div className="space-y-1">
                         <h3 className="font-bold text-lg text-slate-900">{item.s}</h3>
-                        <p className="text-muted-foreground text-md leading-relaxed">{item.d}</p>
+                        <p className="text-muted-foreground text-sm lg:text-md leading-relaxed">{item.d}</p>
                       </div>
                     </div>
                   ))}
@@ -529,13 +529,13 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-24 bg-slate-900 text-white relative overflow-hidden text-center">
+        <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden text-center">
           <div className="container mx-auto px-4 max-w-4xl space-y-12 relative z-10">
             <div className="space-y-6">
-              <h2 className="font-headline text-4xl lg:text-6xl font-bold leading-tight">Quanto mais você adia, mas normal isso parece.</h2>
+              <h2 className="font-headline text-4xl lg:text-5xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
               <div className="space-y-4 max-w-2xl mx-auto">
                 <p className="text-xl text-white/80 leading-relaxed">
-                  Viver com the corpo rígido e evitar movimentos não deveria ser o seu novo normal.
+                  Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
                 <p className="text-lg text-white/70">
                   O SUPER COLUNA foi criado para você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
@@ -570,4 +570,3 @@ export default function SuperColunaLanding() {
     </div>
   );
 }
-
