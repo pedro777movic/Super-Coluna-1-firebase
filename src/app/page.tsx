@@ -385,7 +385,7 @@ export default function SuperColunaLanding() {
             </div>
             <div className="p-8 bg-ghost-grey rounded-3xl border border-border/50">
               <p className="text-slate-900 font-medium">
-                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de consistência guiada?
+                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo??
               </p>
             </div>
           </div>
@@ -497,7 +497,7 @@ export default function SuperColunaLanding() {
             <div className="grid sm:grid-cols-2 gap-8 text-left max-w-3xl mx-auto pt-8">
               <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-sm">
                 <Check className="w-6 h-6 text-secondary shrink-0" />
-                <p className="text-lg font-medium text-slate-700">Volte a focar na vida, não na dor.</p>
+                <p className="text-lg font-medium text-slate-700">Volte a focar na vida, not na dor.</p>
               </div>
               <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-sm">
                 <Check className="w-6 h-6 text-secondary shrink-0" />
