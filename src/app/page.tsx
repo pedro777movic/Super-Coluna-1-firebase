@@ -164,7 +164,7 @@ export default function SuperColunaLanding() {
               <div className="absolute -inset-4 bg-primary/5 rounded-[4rem] blur-3xl -z-10" />
               <Image 
                 src={heroImg || "https://picsum.photos/seed/coluna1/1200/800"} 
-                alt="App Mockup Horizontal" 
+                alt="App Mockup Horizontal Topo" 
                 width={1200} 
                 height={800}
                 className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-xl transition-all hover:scale-[1.02]"
@@ -417,7 +417,7 @@ export default function SuperColunaLanding() {
               <div className="relative group lg:order-2">
                 <Image 
                   src={appHomeImg || "https://picsum.photos/seed/coluna3/1200/800"} 
-                  alt="App Interface Horizontal" 
+                  alt="App Interface Horizontal Meio" 
                   width={1200} 
                   height={800} 
                   className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-lg transition-all hover:scale-[1.02]"
@@ -439,7 +439,7 @@ export default function SuperColunaLanding() {
                     },
                     { 
                       s: "3. Sinta sua evolução", 
-                      d: "Sinta sua lombar melhorar e sinta seu corpo mais flexível e cada vez menos rígido a cada dia.",
+                      d: "Sintua sua lombar melhorar e sinta seu corpo mais flexível e cada vez menos rígido a cada dia.",
                       icon: <CheckCircle2 className="w-6 h-6 text-primary" />
                     }
                   ].map((item, i) => (
@@ -484,7 +484,7 @@ export default function SuperColunaLanding() {
               <div className="relative">
                 <Image 
                   src={appEvolutionImg || "https://picsum.photos/seed/coluna4/1200/800"} 
-                  alt="App Evolution Horizontal" 
+                  alt="App Evolution Horizontal Meio" 
                   width={1200} 
                   height={800} 
                   className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-lg transition-all hover:scale-[1.02]"
