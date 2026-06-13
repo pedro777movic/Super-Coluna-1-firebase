@@ -399,7 +399,7 @@ export default function SuperColunaLanding() {
             <div className="text-center mb-16 space-y-6">
               <h2 className="font-headline text-4xl font-bold">A solução: SUPER COLUNA</h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios consistentes sem esforço.
+                Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios simples de baixo esforço.
               </p>
             </div>
 
@@ -407,7 +407,7 @@ export default function SuperColunaLanding() {
               {[
                 { 
                   t: "Mais mobilidade", 
-                  d: "Volte a se mover com mais confiança e menos rigidez. Recupere movimentos que antes eram naturais.", 
+                  d: "Volte a se mover com mais confidence e menos rigidez. Recupere movimentos que antes eram naturais.", 
                   icon: <Zap className="w-6 h-6" /> 
                 },
                 { 
@@ -534,7 +534,7 @@ export default function SuperColunaLanding() {
               <h2 className="font-headline text-5xl lg:text-7xl font-bold leading-tight">Quanto mais você adia, mas normal isso parece.</h2>
               <div className="space-y-6 max-w-2xl mx-auto">
                 <p className="text-xl text-white/80 leading-relaxed">
-                  Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
+                  Viver com the corpo rígido e evitar movimentos não deveria ser o seu novo normal.
                 </p>
                 <p className="text-lg text-white/70">
                   O SUPER COLUNA foi criado para você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
