@@ -301,7 +301,6 @@ export default function SuperColunaLanding() {
                             {["Sim, bastante", "Às vezes", "Ainda pouco"].map(opt => (
                               <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-lg hover:border-primary group text-left" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
-                                {opt}
                                 <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100" />
                               </Button>
                             ))}
@@ -371,7 +370,7 @@ export default function SuperColunaLanding() {
         <section id="revelation" className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-10">
             <h2 className="font-headline text-4xl font-bold text-slate-900 leading-tight">
-              Sua lombar não precisa de mais dicas.
+              A boa notícia é que você não precisa resolver isso sozinho.
             </h2>
             <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
               <p>
