@@ -556,9 +556,9 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden text-center">
-          <div className="container mx-auto px-4 max-w-4xl space-y-12 relative z-10">
-            <div className="space-y-6">
+        <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 max-w-5xl relative z-10">
+            <div className="text-center space-y-8 mb-16">
               <h2 className="font-headline text-4xl lg:text-5xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
               <div className="space-y-4 max-w-2xl mx-auto">
                 <p className="text-xl text-white/80 leading-relaxed">
@@ -570,16 +570,69 @@ export default function SuperColunaLanding() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="h-16 px-10 rounded-full text-xl font-bold shadow-2xl shadow-primary/20 group">
-                <Link href={checkoutUrl}>
-                  Ativar meu acesso agora
-                  <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
-                </Link>
-              </Button>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Left Side: Deliverables */}
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-primary">Ao ativar seu acesso hoje, você recebe:</h3>
+                <div className="space-y-6">
+                  {[
+                    { title: "Aplicativo Super Coluna com Programa Guiado de 30 Dias", desc: "Rotina estruturada para ajudar você a criar consistência sem complicação." },
+                    { title: "Exercícios Diários em Vídeo", desc: "Aulas simples, rápidas e fáceis de acompanhar." },
+                    { title: "Acompanhamento de Evolução", desc: "Visualize seu progresso e mantenha a motivação ao longo da jornada." },
+                    { title: "Sistema de Conquistas", desc: "Pequenas vitórias que ajudam você a permanecer no caminho." },
+                    { title: "Área \"Entenda Sua Coluna\"", desc: "Vídeos educativos para ajudar você a compreender melhor sua lombar e seus hábitos." },
+                    { title: "Acesso Imediato", desc: "Comece hoje mesmo, diretamente pelo celular, tablet ou computador." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 items-start group">
+                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-1">
+                        <Check className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="font-bold text-white group-hover:text-primary transition-colors">{item.title}</h4>
+                        <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Side: Results & Final Push */}
+              <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 lg:p-10 space-y-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white">Nos próximos 15 dias você terá:</h3>
+                  <div className="space-y-3">
+                    {["Mais mobilidade", "Menos rigidez", "Mais confiança nos movimentos", "Mais liberdade no dia a dia", "Uma rotina simples que você realmente consegue seguir"].map((text, i) => (
+                      <div key={i} className="flex items-center gap-3 text-white/80">
+                        <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                        <span className="text-md">{text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-6 pt-6 border-t border-white/10">
+                  <div className="space-y-4">
+                    <p className="text-lg font-bold text-white">Comece hoje.</p>
+                    <p className="text-white/60 text-sm leading-relaxed">
+                      Daqui a 30 dias, você pode continuar exatamente como está. Ou pode olhar para trás e agradecer por ter dado o primeiro passo para cuidar melhor da sua lombar.
+                    </p>
+                  </div>
+
+                  <Button asChild size="lg" className="w-full h-16 rounded-full text-xl font-bold shadow-2xl shadow-primary/20 group bg-primary hover:bg-primary/90 text-white border-none">
+                    <Link href={checkoutUrl}>
+                      QUERO UMA SUPER COLUNA AGORA
+                      <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                    </Link>
+                  </Button>
+
+                  <div className="flex flex-col items-center gap-2 pt-4">
+                     <p className="text-xs text-white/40 text-center leading-relaxed">
+                       Acesso imediato • Programa guiado • Compatível com celular, tablet e computador
+                     </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <p className="text-sm opacity-50">Acesso imediato e seguro ao programa</p>
           </div>
         </section>
 
