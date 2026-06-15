@@ -450,49 +450,47 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* AUTHORITY MINI SECTION */}
-        <section className="py-16 bg-slate-900 text-white overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -mr-32 -mt-32" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full -ml-32 -mb-32" />
+        <section className="py-10 bg-slate-900 text-white overflow-hidden relative border-y border-white/5">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 blur-[80px] rounded-full -mr-24 -mt-24" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/5 blur-[80px] rounded-full -ml-24 -mb-24" />
           
-          <div className="container mx-auto px-4 max-w-4xl relative z-10">
-            <div className="flex flex-col items-center text-center space-y-10">
-              <div className="space-y-3">
-                <div className="flex items-center justify-center gap-2 text-primary font-bold tracking-widest text-xs uppercase mb-4">
-                  <Award className="w-4 h-4" /> Base Científica de Excelência
+          <div className="container mx-auto px-4 max-w-5xl relative z-10">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+              <div className="flex-1 text-center md:text-left space-y-4">
+                <div className="inline-flex items-center gap-2 text-primary font-bold tracking-widest text-[10px] uppercase bg-white/5 px-3 py-1 rounded-full">
+                  <Award className="w-3 h-3" /> Base Científica
                 </div>
-                <h2 className="font-headline text-2xl lg:text-4xl font-bold leading-tight max-w-3xl mx-auto">
-                  Mais de <span className="text-primary italic">30 anos de pesquisas</span> sobre coluna apontam para a mesma direção
+                <h2 className="font-headline text-2xl lg:text-3xl font-bold leading-tight">
+                  Mais de <span className="text-primary italic">30 anos de pesquisas</span> apontam para a mesma direção
                 </h2>
+                <div className="space-y-2">
+                  <p className="text-white/40 text-sm italic">
+                    "O problema é conseguir aplicar isso na rotina."
+                  </p>
+                  <p className="text-md text-white/80 leading-relaxed font-medium">
+                    O <span className="text-primary font-bold">SUPER COLUNA</span> transforma ciência em um programa simples e guiado.
+                  </p>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
-                {[
-                  { label: "Movimento", icon: <Activity className="w-5 h-5" /> },
-                  { label: "Fortalecimento", icon: <Target className="w-5 h-5" /> },
-                  { label: "Consistência", icon: <History className="w-5 h-5" /> }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex flex-col items-center space-y-3 p-4 rounded-2xl bg-white/5 border border-white/10">
-                    <div className="text-primary">{item.icon}</div>
-                    <span className="text-xl font-bold tracking-tight">{item.label}</span>
-                  </div>
-                ))}
-              </div>
+              <div className="flex-1 w-full max-w-md space-y-6">
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { label: "Movimento", icon: <Activity className="w-4 h-4" /> },
+                    { label: "Fortalecimento", icon: <Target className="w-4 h-4" /> },
+                    { label: "Consistência", icon: <History className="w-4 h-4" /> }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex flex-col items-center justify-center space-y-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 transition-colors">
+                      <div className="text-primary">{item.icon}</div>
+                      <span className="text-[10px] font-bold uppercase tracking-tighter text-white/70">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
 
-              <div className="space-y-6 max-w-2xl mx-auto">
-                <p className="text-white/60 text-lg italic">
-                  "O problema é conseguir aplicar isso na rotina."
-                </p>
-                <p className="text-xl font-medium leading-relaxed">
-                  Por isso o <span className="text-primary font-bold">SUPER COLUNA</span> transforma esses princípios em um programa simples, guiado e fácil de seguir.
-                </p>
-              </div>
-
-              {/* STRATEGIC MIDDLE CTA */}
-              <div className="pt-4">
-                <Button asChild size="lg" className="h-16 px-10 rounded-full text-xl font-bold shadow-2xl shadow-primary/40 group bg-primary hover:bg-primary/90">
+                <Button asChild size="lg" className="w-full h-14 rounded-full text-lg font-bold shadow-2xl shadow-primary/30 group bg-primary hover:bg-primary/90">
                   <Link href={checkoutUrl}>
-                    Quero começar minha jornada agora
-                    <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                    Ativar meu acesso
+                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
               </div>
