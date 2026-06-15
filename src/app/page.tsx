@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -24,7 +23,10 @@ import {
   Circle,
   ArrowDown,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  History,
+  Target,
+  Award
 } from "lucide-react";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { generateSpinalAnalysis, type PersonalizedSpinalAnalysisOutput } from "@/ai/flows/generate-spinal-analysis";
@@ -442,6 +444,47 @@ export default function SuperColunaLanding() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AUTHORITY MINI SECTION */}
+        <section className="py-16 bg-slate-900 text-white overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -mr-32 -mt-32" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full -ml-32 -mb-32" />
+          
+          <div className="container mx-auto px-4 max-w-4xl relative z-10">
+            <div className="flex flex-col items-center text-center space-y-10">
+              <div className="space-y-3">
+                <div className="flex items-center justify-center gap-2 text-primary font-bold tracking-widest text-xs uppercase mb-4">
+                  <Award className="w-4 h-4" /> Base Científica de Excelência
+                </div>
+                <h2 className="font-headline text-2xl lg:text-4xl font-bold leading-tight max-w-3xl mx-auto">
+                  Mais de <span className="text-primary italic">30 anos de pesquisas</span> sobre coluna apontam para a mesma direção
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
+                {[
+                  { label: "Movimento", icon: <Activity className="w-5 h-5" /> },
+                  { label: "Fortalecimento", icon: <Target className="w-5 h-5" /> },
+                  { label: "Consistência", icon: <History className="w-5 h-5" /> }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex flex-col items-center space-y-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                    <div className="text-primary">{item.icon}</div>
+                    <span className="text-xl font-bold tracking-tight">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-6 max-w-2xl mx-auto">
+                <p className="text-white/60 text-lg italic">
+                  "O problema é conseguir aplicar isso na rotina."
+                </p>
+                <p className="text-xl font-medium leading-relaxed">
+                  Por isso o <span className="text-primary font-bold">SUPER COLUNA</span> transforma esses princípios em um programa simples, guiado e fácil de seguir.
+                </p>
               </div>
             </div>
           </div>
