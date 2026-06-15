@@ -356,7 +356,7 @@ export default function SuperColunaLanding() {
             </div>
             <div className="p-6 bg-ghost-grey rounded-2xl border border-border/50">
               <p className="text-slate-900 font-medium">
-                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
+                Você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
               </p>
             </div>
           </div>
@@ -465,7 +465,7 @@ export default function SuperColunaLanding() {
                 </h2>
                 <div className="space-y-2">
                   <p className="text-white/40 text-sm italic">
-                    "O problema é conseguir aplicar isso na rotina."
+                    "O problem é conseguir aplicar isso na rotina."
                   </p>
                   <p className="text-md text-white/80 leading-relaxed font-medium">
                     O <span className="text-primary font-bold">SUPER COLUNA</span> transforma ciência em um programa simples e guiado.
