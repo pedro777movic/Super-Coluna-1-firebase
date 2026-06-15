@@ -465,7 +465,7 @@ export default function SuperColunaLanding() {
                 </h2>
                 <div className="space-y-2">
                   <p className="text-white/40 text-sm italic">
-                    "O problem é conseguir aplicar isso na rotina."
+                    "O problema é conseguir aplicar isso na sua rotina."
                   </p>
                   <p className="text-md text-white/80 leading-relaxed font-medium">
                     O <span className="text-primary font-bold">SUPER COLUNA</span> transforma ciência em um programa simples e guiado.
