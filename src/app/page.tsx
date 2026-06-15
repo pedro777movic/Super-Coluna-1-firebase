@@ -43,7 +43,6 @@ export default function SuperColunaLanding() {
   const [scrollProgress, setScrollProgress] = useState(0);
   
   // -- Images --
-  const heroImg = PlaceHolderImages?.find(img => img.id === "hero-mockup")?.imageUrl;
   const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
   const appEvolutionImg = PlaceHolderImages?.find(img => img.id === "app-evolution")?.imageUrl;
 
@@ -137,20 +136,20 @@ export default function SuperColunaLanding() {
 
       <main className="pt-16">
         
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-white py-12 lg:py-20">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-wide">
+        {/* HERO (CENTRALIZADO SEM IMAGEM) */}
+        <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-wide mx-auto">
                 <span>SUPER COLUNA</span>
               </div>
-              <h1 className="font-headline text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-slate-900">
+              <h1 className="font-headline text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-slate-900">
                 Sua lombar está <span className="text-primary">roubando mais da sua vida</span> do que você imagina.
               </h1>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 A cada dia que passa, o desconforto parece mais normal. Mas viver com limitações não deveria fazer parte da sua rotina.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="h-14 px-8 text-lg font-bold rounded-full group shadow-xl shadow-primary/20">
                   <Link href={checkoutUrl}>
                     Começar agora
@@ -161,17 +160,6 @@ export default function SuperColunaLanding() {
                   Quero entender meu caso
                 </Button>
               </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-[4rem] blur-3xl -z-10" />
-              <Image 
-                src={heroImg || "https://picsum.photos/seed/coluna1/1200/800"} 
-                alt="App Mockup Horizontal Topo" 
-                width={1200} 
-                height={800}
-                className="rounded-3xl shadow-2xl border-8 border-white mx-auto max-w-full lg:max-w-xl transition-all hover:scale-[1.02]"
-                priority
-              />
             </div>
           </div>
         </section>
