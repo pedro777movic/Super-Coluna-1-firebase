@@ -486,6 +486,16 @@ export default function SuperColunaLanding() {
                   Por isso o <span className="text-primary font-bold">SUPER COLUNA</span> transforma esses princípios em um programa simples, guiado e fácil de seguir.
                 </p>
               </div>
+
+              {/* STRATEGIC MIDDLE CTA */}
+              <div className="pt-4">
+                <Button asChild size="lg" className="h-16 px-10 rounded-full text-xl font-bold shadow-2xl shadow-primary/40 group bg-primary hover:bg-primary/90">
+                  <Link href={checkoutUrl}>
+                    Quero começar minha jornada agora
+                    <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
