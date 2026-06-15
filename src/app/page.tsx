@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -16,24 +17,23 @@ import {
   Zap, 
   ArrowRight, 
   CheckCircle2, 
-  Smartphone, 
   ChevronRight,
   TrendingUp,
   Menu,
   Check,
   Circle,
   ArrowDown,
-  Info,
-  ShieldCheck,
-  Calendar,
   Sparkles,
-  Heart
+  ShieldCheck
 } from "lucide-react";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { generateSpinalAnalysis, type PersonalizedSpinalAnalysisOutput } from "@/ai/flows/generate-spinal-analysis";
 import { cn } from "@/lib/utils";
 
 export default function SuperColunaLanding() {
+  // -- Config --
+  const checkoutUrl = "https://pay.kiwify.com.br/yc50tcH";
+
   // -- States --
   const [quizStep, setQuizStep] = useState(0); // 0: Intro, 1: Questions, 2: Loading, 3: Result
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -151,9 +151,11 @@ export default function SuperColunaLanding() {
                 A cada dia que passa, o desconforto parece mais normal. Mas viver com limitações não deveria fazer parte da sua rotina.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="h-14 px-8 text-lg font-bold rounded-full group shadow-xl shadow-primary/20" onClick={handleStartQuiz}>
-                  Começar agora
-                  <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <Button asChild size="lg" className="h-14 px-8 text-lg font-bold rounded-full group shadow-xl shadow-primary/20">
+                  <Link href={checkoutUrl}>
+                    Começar agora
+                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-bold rounded-full border-2" onClick={handleStartQuiz}>
                   Quero entender meu caso
@@ -364,7 +366,7 @@ export default function SuperColunaLanding() {
             </div>
             <div className="p-6 bg-ghost-grey rounded-2xl border border-border/50">
               <p className="text-slate-900 font-medium">
-                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo??
+                Talvez você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
               </p>
             </div>
           </div>
@@ -530,9 +532,11 @@ export default function SuperColunaLanding() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="h-16 px-10 rounded-full text-xl font-bold shadow-2xl shadow-primary/20 group">
-                Ativar meu acesso agora
-                <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+              <Button asChild size="lg" className="h-16 px-10 rounded-full text-xl font-bold shadow-2xl shadow-primary/20 group">
+                <Link href={checkoutUrl}>
+                  Ativar meu acesso agora
+                  <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                </Link>
               </Button>
             </div>
             
