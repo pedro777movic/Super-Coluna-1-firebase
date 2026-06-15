@@ -555,81 +555,69 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
-        <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
+        {/* FINAL CTA - OTIIZADO E REDUZIDO */}
+        <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
           <div className="container mx-auto px-4 max-w-5xl relative z-10">
-            <div className="text-center space-y-8 mb-16">
-              <h2 className="font-headline text-4xl lg:text-5xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
-              <div className="space-y-4 max-w-2xl mx-auto">
-                <p className="text-xl text-white/80 leading-relaxed">
-                  Viver com o corpo rígido e evitar movimentos não deveria ser o seu novo normal.
-                </p>
-                <p className="text-lg text-white/70">
-                  O SUPER COLUNA foi criado para ajudar você a recuperar a mobilidade, fortalecer a lombar e voltar a se movimentar com mais confiança.
-                </p>
+            <div className="text-center space-y-6 mb-12">
+              <h2 className="font-headline text-3xl lg:text-4xl font-bold leading-tight">Quanto mais você adia, mais normal isso parece.</h2>
+              <div className="space-y-2 max-w-2xl mx-auto">
+                <p className="text-lg text-white/80">Viver com o corpo rígido não deveria ser o seu novo normal.</p>
+                <p className="text-white/60 text-sm">O SUPER COLUNA ajuda você a recuperar a mobilidade e confiança.</p>
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Left Side: Deliverables */}
-              <div className="space-y-8">
-                <h3 className="text-2xl font-bold text-primary">Ao ativar seu acesso hoje, você recebe:</h3>
-                <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+              {/* Left Side: Deliverables Compact */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-bold text-primary">Ao ativar seu acesso, você recebe:</h3>
+                <div className="grid gap-4">
                   {[
-                    { title: "Aplicativo Super Coluna com Programa Guiado de 30 Dias", desc: "Rotina estruturada para ajudar você a criar consistência sem complicação." },
-                    { title: "Exercícios Diários em Vídeo", desc: "Aulas simples, rápidas e fáceis de acompanhar." },
-                    { title: "Acompanhamento de Evolução", desc: "Visualize seu progresso e mantenha a motivação ao longo da jornada." },
-                    { title: "Sistema de Conquistas", desc: "Pequenas vitórias que ajudam você a permanecer no caminho." },
-                    { title: "Área \"Entenda Sua Coluna\"", desc: "Vídeos educativos para ajudar você a compreender melhor sua lombar e seus hábitos." },
-                    { title: "Acesso Imediato", desc: "Comece hoje mesmo, diretamente pelo celular, tablet ou computador." }
+                    { title: "Aplicativo com Programa de 30 Dias", desc: "Rotina estruturada e sem complicação." },
+                    { title: "Exercícios Diários em Vídeo", desc: "Aulas simples e fáceis de acompanhar." },
+                    { title: "Acompanhamento de Evolução", desc: "Visualize seu progresso diário." },
+                    { title: "Sistema de Conquistas", desc: "Pequenas vitórias motivadoras." },
+                    { title: "Área \"Entenda Sua Coluna\"", desc: "Vídeos educativos exclusivos." },
+                    { title: "Acesso Imediato", desc: "Comece agora pelo celular ou PC." }
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-4 items-start group">
-                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-1">
-                        <Check className="w-3.5 h-3.5 text-white" />
+                    <div key={i} className="flex gap-3 items-start">
+                      <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-white" />
                       </div>
-                      <div className="space-y-1">
-                        <h4 className="font-bold text-white group-hover:text-primary transition-colors">{item.title}</h4>
-                        <p className="text-sm text-white/60 leading-relaxed">{item.desc}</p>
+                      <div>
+                        <h4 className="text-sm font-bold text-white">{item.title}</h4>
+                        <p className="text-xs text-white/50">{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Right Side: Results & Final Push */}
-              <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 lg:p-10 space-y-8">
+              {/* Right Side: Results & Final Push Compact */}
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-6 lg:p-8 flex flex-col justify-between">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-white">Nos próximos 15 dias você terá:</h3>
-                  <div className="space-y-3">
-                    {["Mais mobilidade", "Menos rigidez", "Mais confiança nos movimentos", "Mais liberdade no dia a dia", "Uma rotina simples que você realmente consegue seguir"].map((text, i) => (
-                      <div key={i} className="flex items-center gap-3 text-white/80">
-                        <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                        <span className="text-md">{text}</span>
-                      </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Nos próximos 15 dias:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+                    {["✓ Mais mobilidade", "✓ Menos rigidez", "✓ Mais confiança", "✓ Mais liberdade", "✓ Rotina simples"].map((text, i) => (
+                      <span key={i} className="text-sm text-white/80">{text}</span>
                     ))}
                   </div>
                 </div>
 
-                <div className="space-y-6 pt-6 border-t border-white/10">
-                  <div className="space-y-4">
-                    <p className="text-lg font-bold text-white">Comece hoje.</p>
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      Daqui a 30 dias, você pode continuar exatamente como está. Ou pode olhar para trás e agradecer por ter dado o primeiro passo para cuidar melhor da sua lombar.
-                    </p>
-                  </div>
-
-                  <Button asChild size="lg" className="w-full h-16 rounded-full text-xl font-bold shadow-2xl shadow-primary/20 group bg-primary hover:bg-primary/90 text-white border-none">
+                <div className="mt-8 space-y-4 pt-6 border-t border-white/10">
+                  <p className="text-sm text-white/70 leading-relaxed italic">
+                    "Daqui a 30 dias, você pode continuar como está ou agradecer por ter dado o primeiro passo hoje."
+                  </p>
+                  
+                  <Button asChild size="lg" className="w-full h-14 rounded-full text-md font-bold shadow-2xl shadow-primary/20 group bg-primary hover:bg-primary/90">
                     <Link href={checkoutUrl}>
                       QUERO UMA SUPER COLUNA AGORA
-                      <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
+                      <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
 
-                  <div className="flex flex-col items-center gap-2 pt-4">
-                     <p className="text-xs text-white/40 text-center leading-relaxed">
-                       Acesso imediato • Programa guiado • Compatível com celular, tablet e computador
-                     </p>
-                  </div>
+                  <p className="text-[10px] text-white/30 text-center uppercase tracking-widest">
+                    Acesso imediato • Programa guiado • Multiplataforma
+                  </p>
                 </div>
               </div>
             </div>
