@@ -50,43 +50,43 @@ const testimonials = [
   {
     name: "Ana Martins",
     role: "39 anos, Arquiteta",
-    text: "O sistema é tão simples que no começo duvidei. 15 dias seguindo os vídeos e a rigidez matinal que me acompanhava há anos simplesmente sumiu.",
+    text: "O sistema é tão simples que no começo duvidei. 15 dias seguindo os exercícios e a rigidez matinal simplesmente sumiu.",
     stars: 5
   },
   {
     name: "Roberto Silveira",
     role: "62 anos, Aposentado",
-    text: "Voltei a brincar com meus netos no chão. O Super Coluna me devolveu momentos que eu achei que tinham ficado no passado por causa da idade.",
+    text: "Voltei a brincar com meus netos no chão. O Super Coluna me devolveu momentos que achei que tinham ficado no passado.",
     stars: 5
   },
   {
     name: "Juliana Farias",
     role: "42 anos, Advogada",
-    text: "Dirigir por 2 horas costumava ser um pesadelo. Hoje faço viagens longas e chego ao destino inteira, sem precisar de remédios para dor.",
+    text: "Dirigir por 2 horas costumava ser um pesadelo. Hoje faço viagens longas e chego ao destino inteira, sem dor.",
     stars: 5
   },
   {
     name: "Marcos Torres",
     role: "45 anos, Desenvolvedor",
-    text: "Trabalho sentado o dia todo. O Super Coluna virou meu ritual de liberdade. Acordo sem medo de 'travar' e meu rendimento no trabalho até melhorou.",
+    text: "Trabalho sentado o dia todo. O Super Coluna virou meu ritual de liberdade. Acordo sem medo de 'travar' e meu rendimento melhorou.",
     stars: 5
   },
   {
     name: "Beatriz Lemos",
     role: "31 anos, Professora",
-    text: "A sensação de segurança que o fortalecimento me deu é incrível. Perdi o medo de fazer movimentos básicos e voltei a me sentir jovem e leve.",
+    text: "A sensação de segurança que o fortalecimento me deu é incrível. Perdi o medo de fazer movimentos básicos.",
     stars: 5
   },
   {
     name: "Ricardo Prado",
     role: "50 anos, Motorista",
-    text: "Eu vivia à base de anti-inflamatórios. Seguir o sistema guiado foi a única coisa que trouxe alívio real e duradouro. É um investimento na vida.",
+    text: "Eu vivia à base de anti-inflamatórios. Seguir o sistema guiado foi a única coisa que trouxe alívio real e duradouro.",
     stars: 5
   },
   {
     name: "Fernanda G.",
     role: "37 anos, Designer",
-    text: "A clareza dos exercícios é o diferencial. Você sabe exatamente o que fazer e sente a evolução a cada dia. Minha lombar nunca esteve tão forte.",
+    text: "A clareza dos exercícios é o diferencial. Você sabe exatamente o que fazer e sente a evolução a cada dia.",
     stars: 5
   }
 ];
@@ -115,7 +115,6 @@ export default function SuperColunaLanding() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Auto-play logic for carousel
   useEffect(() => {
     if (!api) return;
     const intervalId = setInterval(() => {
@@ -175,7 +174,7 @@ export default function SuperColunaLanding() {
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-[70] pointer-events-none">
         <div 
-          className="h-full bg-primary transition-all duration-300 ease-out"
+          className="h-full bg-secondary transition-all duration-300 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -187,16 +186,16 @@ export default function SuperColunaLanding() {
             <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
               <Activity className="text-white w-5 h-5" />
             </div>
-            <span className="font-headline font-bold text-lg lg:text-xl tracking-tighter text-slate-900">SUPER COLUNA</span>
+            <span className="font-headline font-bold text-lg lg:text-xl tracking-tighter text-primary">SUPER COLUNA</span>
           </div>
           <div className="hidden md:flex gap-10 items-center">
             <nav className="flex gap-8 text-sm font-bold text-slate-500 uppercase tracking-widest">
               <a href="#how-it-works" className="hover:text-primary transition-colors">Como Funciona</a>
               <a href="#transformation" className="hover:text-primary transition-colors">A Jornada</a>
             </nav>
-            <Button size="sm" className="rounded-full px-6 h-10 font-bold active:scale-95 transition-transform" onClick={handleStartQuiz}>Avaliação Gratuita</Button>
+            <Button size="sm" variant="secondary" className="rounded-full px-6 h-10 font-bold active:scale-95 transition-transform shadow-button" onClick={handleStartQuiz}>Avaliação Gratuita</Button>
           </div>
-          <Button variant="ghost" size="icon" className="md:hidden rounded-full hover:bg-slate-100">
+          <Button variant="ghost" size="icon" className="md:hidden rounded-full hover:bg-slate-100 text-primary">
             <Menu className="w-6 h-6" />
           </Button>
         </div>
@@ -212,20 +211,20 @@ export default function SuperColunaLanding() {
                 <Sparkles className="w-3 h-3" />
                 <span>EXCLUSIVO SUPER COLUNA</span>
               </div>
-              <h1 className="font-headline text-4xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-slate-900">
-                Sua lombar está <span className="text-primary italic">roubando da sua vida</span> mais do que você imagina.
+              <h1 className="text-4xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+                Sua lombar está <span className="text-secondary italic">roubando da sua vida</span> mais do que você imagina.
               </h1>
               <p className="text-lg lg:text-2xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
                 A cada dia que passa, o desconforto parece mais normal. Mas viver com limitações não deveria fazer parte da sua rotina.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center pt-4">
-                <Button asChild size="lg" className="h-16 px-10 text-lg font-bold rounded-full group shadow-button active:scale-95 transition-all">
+                <Button asChild size="lg" variant="secondary" className="h-16 px-10 text-lg font-bold rounded-full group shadow-button active:scale-95 transition-all">
                   <Link href={checkoutUrl}>
                     Começar agora
                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="h-16 px-10 text-lg font-bold rounded-full border-2 border-slate-200 hover:bg-slate-50 active:scale-95 transition-all" onClick={handleStartQuiz}>
+                <Button variant="outline" size="lg" className="h-16 px-10 text-lg font-bold rounded-full border-2 border-slate-200 hover:bg-slate-50 active:scale-95 transition-all text-primary" onClick={handleStartQuiz}>
                   Entender meu caso
                 </Button>
               </div>
@@ -237,7 +236,7 @@ export default function SuperColunaLanding() {
         <section className="bg-ghost-grey py-20 lg:py-28">
           <div className="section-container">
             <div className="text-center mb-16 space-y-4 animate-fade-in-up">
-              <h2 className="font-headline text-3xl lg:text-5xl font-bold text-slate-900 tracking-tight">Isso soa familiar para você?</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">Isso soa familiar para você?</h2>
               <p className="text-slate-500 text-lg lg:text-xl max-w-2xl mx-auto font-medium">
                 Quando a lombar reclama, ela muda silenciosamente a forma como você vive o seu dia.
               </p>
@@ -251,7 +250,7 @@ export default function SuperColunaLanding() {
                 "Tem a sensação de que está se adaptando cada vez mais às limitações",
                 "Desconforto persistente após longos períodos sentado"
               ].map((text, i) => (
-                <div key={i} className="flex gap-4 p-7 bg-white rounded-[2rem] shadow-premium border border-white items-start hover:border-primary/20 transition-all hover:-translate-y-1 group">
+                <div key={i} className="flex gap-4 p-7 bg-white rounded-[2rem] shadow-premium border border-white items-start hover:border-secondary/20 transition-all hover:-translate-y-1 group">
                   <div className="w-7 h-7 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-0.5 group-hover:bg-secondary group-hover:text-white transition-colors">
                     <Check className="w-4 h-4 stroke-[3px]" />
                   </div>
@@ -265,12 +264,12 @@ export default function SuperColunaLanding() {
         {/* INVISIBLE ADAPTATION */}
         <section className="py-24 bg-white overflow-hidden">
           <div className="section-container max-w-3xl text-center space-y-8 animate-fade-in-up">
-            <h2 className="font-headline text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
               O pior não é a rigidez.
             </h2>
             <div className="space-y-6">
               <p className="text-2xl lg:text-3xl text-slate-400 leading-relaxed font-medium">
-                É o fato de você começar a considerá-la <span className="text-slate-900 font-bold decoration-primary decoration-4 underline-offset-8">normal.</span>
+                É o fato de você começar a considerá-la <span className="text-foreground font-bold decoration-secondary decoration-4 underline-offset-8">normal.</span>
               </p>
               <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
                 Viver se adaptando a restrições rouba sua liberdade pouco a pouco. Adaptar-se à limitação não é o mesmo que resolvê-la.
@@ -285,7 +284,7 @@ export default function SuperColunaLanding() {
             <Card className="shadow-premium border-none overflow-hidden rounded-[2.5rem] bg-white">
               <div className="h-2 bg-slate-100 w-full">
                 <div 
-                  className="h-full bg-primary transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1)" 
+                  className="h-full bg-secondary transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1)" 
                   style={{ width: quizStep === 1 ? `${(currentQuestion / 3) * 100}%` : quizStep === 3 ? '100%' : '0%' }}
                 />
               </div>
@@ -297,10 +296,10 @@ export default function SuperColunaLanding() {
                       <Activity className="w-10 h-10" />
                     </div>
                     <div className="space-y-3">
-                      <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Diagnóstico de Perfil</h2>
+                      <h2 className="text-3xl font-bold tracking-tight">Diagnóstico de Perfil</h2>
                       <p className="text-slate-500 font-medium text-lg">3 perguntas rápidas para analisarmos seu caso.</p>
                     </div>
-                    <Button size="lg" className="w-full rounded-full h-16 text-lg font-bold shadow-button active:scale-[0.98] transition-all" onClick={() => setQuizStep(1)}>
+                    <Button size="lg" variant="secondary" className="w-full rounded-full h-16 text-lg font-bold shadow-button active:scale-[0.98] transition-all" onClick={() => setQuizStep(1)}>
                       Iniciar Avaliação (15s)
                     </Button>
                   </div>
@@ -315,12 +314,12 @@ export default function SuperColunaLanding() {
                     <div className="space-y-6">
                       {currentQuestion === 1 && (
                         <>
-                          <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">1. O que mais incomoda você hoje?</h3>
+                          <h3 className="text-2xl lg:text-3xl font-bold tracking-tight">1. O que mais incomoda você hoje?</h3>
                           <div className="grid gap-3.5">
                             {["Dor ou desconforto ao acordar", "Incômodo após ficar muito tempo sentado", "Desconforto ao dirigir", "Sensação constante de rigidez"].map(opt => (
-                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-primary hover:bg-primary/5 group text-left transition-all active:scale-[0.99]" onClick={() => handleQuizAnswer(opt)}>
+                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-secondary hover:bg-secondary/5 group text-left transition-all active:scale-[0.99] text-slate-700" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
-                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity" />
+                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity text-secondary" />
                               </Button>
                             ))}
                           </div>
@@ -328,12 +327,12 @@ export default function SuperColunaLanding() {
                       )}
                       {currentQuestion === 2 && (
                         <>
-                          <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">2. Há quanto tempo isso acontece?</h3>
+                          <h3 className="text-2xl lg:text-3xl font-bold tracking-tight">2. Há quanto tempo isso acontece?</h3>
                           <div className="grid gap-3.5">
                             {["Menos de 3 meses", "Entre 3 e 12 meses", "Mais de 1 ano"].map(opt => (
-                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-primary hover:bg-primary/5 group text-left transition-all active:scale-[0.99]" onClick={() => handleQuizAnswer(opt)}>
+                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-secondary hover:bg-secondary/5 group text-left transition-all active:scale-[0.99] text-slate-700" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
-                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity" />
+                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity text-secondary" />
                               </Button>
                             ))}
                           </div>
@@ -341,12 +340,12 @@ export default function SuperColunaLanding() {
                       )}
                       {currentQuestion === 3 && (
                         <>
-                          <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">3. Isso já interfere na sua rotina?</h3>
+                          <h3 className="text-2xl lg:text-3xl font-bold tracking-tight">3. Isso já interfere na sua rotina?</h3>
                           <div className="grid gap-3.5">
                             {["Sim, bastante", "Às vezes", "Ainda pouco"].map(opt => (
-                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-primary hover:bg-primary/5 group text-left transition-all active:scale-[0.99]" onClick={() => handleQuizAnswer(opt)}>
+                              <Button key={opt} variant="outline" className="h-16 justify-between px-8 rounded-2xl text-md font-bold hover:border-secondary hover:bg-secondary/5 group text-left transition-all active:scale-[0.99] text-slate-700" onClick={() => handleQuizAnswer(opt)}>
                                 {opt}
-                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity" />
+                                <ChevronRight className="w-5 h-5 opacity-30 group-hover:opacity-100 transition-opacity text-secondary" />
                               </Button>
                             ))}
                           </div>
@@ -360,10 +359,10 @@ export default function SuperColunaLanding() {
                   <div className="space-y-10 text-center animate-fade-in-up py-10">
                     <div className="relative w-20 h-20 mx-auto">
                       <div className="absolute inset-0 border-4 border-slate-100 rounded-full" />
-                      <div className="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+                      <div className="absolute inset-0 border-4 border-secondary border-t-transparent rounded-full animate-spin" />
                     </div>
                     <div className="space-y-3">
-                      <h3 className="text-2xl font-bold text-slate-900">Analisando seu perfil...</h3>
+                      <h3 className="text-2xl font-bold">Analisando seu perfil...</h3>
                       <p className="text-slate-500 font-medium">Cruzando dados de mobilidade e impacto rotineiro.</p>
                     </div>
                   </div>
@@ -375,7 +374,7 @@ export default function SuperColunaLanding() {
                       <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto text-secondary">
                         <CheckCircle2 className="w-10 h-10 stroke-[2.5px]" />
                       </div>
-                      <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Perfil Analisado</h2>
+                      <h2 className="text-3xl font-bold tracking-tight">Perfil Analisado</h2>
                       <p className="text-lg italic text-slate-500 font-medium leading-relaxed max-w-xl mx-auto">
                         "{quizResult.empathyStatement}"
                       </p>
@@ -396,11 +395,11 @@ export default function SuperColunaLanding() {
                         <TrendingUp className="w-4 h-4" /> Diagnóstico Comportamental:
                       </h4>
                       <p className="text-slate-700 leading-relaxed text-lg font-medium">
-                        Seu perfil indica que você está no <span className="text-slate-900 font-bold">"Ciclo da Lombar que Nunca Descansa"</span>. O corpo entra em um estado de alerta onde cada movimento é calculado para evitar o incômodo, o que gera ainda mais rigidez.
+                        Seu perfil indica que você está no <span className="text-primary font-bold">"Ciclo da Lombar que Nunca Descansa"</span>. O corpo entra em um estado de alerta onde cada movimento é calculado para evitar o incômodo, gerando ainda mais rigidez.
                       </p>
                     </div>
 
-                    <Button className="w-full h-16 rounded-full text-lg font-bold shadow-button group active:scale-[0.98] transition-all" onClick={() => {
+                    <Button variant="secondary" className="w-full h-16 rounded-full text-lg font-bold shadow-button group active:scale-[0.98] transition-all" onClick={() => {
                       document.getElementById("revelation")?.scrollIntoView({ behavior: "smooth" });
                     }}>
                       Revelar a causa real
@@ -416,7 +415,7 @@ export default function SuperColunaLanding() {
         {/* REVELATION */}
         <section id="revelation" className="py-24 bg-white">
           <div className="section-container max-w-3xl text-center space-y-10 animate-fade-in-up">
-            <h2 className="font-headline text-3xl lg:text-5xl font-bold text-slate-900 leading-[1.15] tracking-tight">
+            <h2 className="text-3xl lg:text-5xl font-bold leading-[1.15] tracking-tight">
               A boa notícia é que você não precisa resolver isso sozinho.
             </h2>
             <div className="space-y-6 text-xl text-slate-500 leading-relaxed font-medium">
@@ -425,7 +424,7 @@ export default function SuperColunaLanding() {
               <p>Tudo fica mais fácil quando existe um sistema claro para seguir.</p>
             </div>
             <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-inner">
-              <p className="text-slate-900 font-bold text-lg lg:text-xl leading-relaxed">
+              <p className="text-foreground font-bold text-lg lg:text-xl leading-relaxed">
                 Você não precisa continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
               </p>
             </div>
@@ -436,7 +435,7 @@ export default function SuperColunaLanding() {
         <section className="py-24 lg:py-32 bg-ghost-grey">
           <div className="section-container">
             <div className="text-center mb-20 space-y-4 animate-fade-in-up">
-              <h2 className="font-headline text-3xl lg:text-5xl font-bold tracking-tight">A solução: SUPER COLUNA</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">A solução: SUPER COLUNA</h2>
               <p className="text-slate-500 text-lg lg:text-xl max-w-2xl mx-auto font-medium">
                 Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios simples de baixo esforço.
               </p>
@@ -465,7 +464,7 @@ export default function SuperColunaLanding() {
                     {feature.icon}
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-bold text-2xl text-slate-900">{feature.t}</h3>
+                    <h3 className="font-bold text-2xl">{feature.t}</h3>
                     <p className="text-slate-500 text-base lg:text-lg leading-relaxed font-medium">{feature.d}</p>
                   </div>
                 </Card>
@@ -490,7 +489,7 @@ export default function SuperColunaLanding() {
               </div>
               <div className="space-y-12 lg:order-1 animate-fade-in-up">
                 <div className="space-y-4">
-                  <h2 className="font-headline text-3xl lg:text-5xl font-bold leading-tight tracking-tight">Simples e prático</h2>
+                  <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">Simples e prático</h2>
                   <p className="text-slate-500 text-lg font-medium">A jornada para sua liberdade de movimento em 3 passos:</p>
                 </div>
                 <div className="space-y-10">
@@ -498,23 +497,23 @@ export default function SuperColunaLanding() {
                     { 
                       s: "1. Entre no aplicativo", 
                       d: "Saiba exatamente o que fazer. Sem dúvidas sobre os exercícios que resolverão a dor lombar.",
-                      icon: <CheckCircle2 className="w-7 h-7 text-primary" />
+                      icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     },
                     { 
                       s: "2. Siga os exercícios", 
                       d: "Poucos minutos por dia. Vídeos rápidos e guiados que cabem na sua rotina.",
-                      icon: <CheckCircle2 className="w-7 h-7 text-primary" />
+                      icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     },
                     { 
                       s: "3. Sinta sua evolução", 
-                      d: "Sinta sua lombar melhorar e seu corpo mais flexível e cada vez menos rígido a cada dia.",
-                      icon: <CheckCircle2 className="w-7 h-7 text-primary" />
+                      d: "Sinta sua lombar melhorar e seu corpo cada vez menos rígido a cada dia.",
+                      icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-6 items-start group">
                       <div className="shrink-0 mt-1 transition-transform group-hover:scale-110">{item.icon}</div>
                       <div className="space-y-1.5">
-                        <h3 className="font-bold text-xl text-slate-900 tracking-tight">{item.s}</h3>
+                        <h3 className="font-bold text-xl tracking-tight">{item.s}</h3>
                         <p className="text-slate-500 text-base lg:text-lg leading-relaxed font-medium">{item.d}</p>
                       </div>
                     </div>
@@ -526,25 +525,25 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* AUTHORITY MINI SECTION */}
-        <section className="py-16 bg-slate-900 text-white overflow-hidden relative border-y border-white/5">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -mr-32 -mt-32" />
+        <section className="py-12 bg-primary text-white overflow-hidden relative border-y border-white/5">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -mr-32 -mt-32" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 blur-[100px] rounded-full -ml-32 -mb-32" />
           
           <div className="section-container relative z-10">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
               <div className="flex-1 text-center md:text-left space-y-6">
-                <div className="inline-flex items-center gap-2 text-primary font-black tracking-[0.2em] text-[10px] uppercase bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
-                  <Award className="w-3.5 h-3.5" /> CIÊNCIA APLICADA
+                <div className="inline-flex items-center gap-2 text-white font-black tracking-[0.2em] text-[10px] uppercase bg-white/10 px-4 py-1.5 rounded-full border border-white/20">
+                  <Award className="w-3.5 h-3.5 text-secondary" /> CIÊNCIA APLICADA
                 </div>
-                <h2 className="font-headline text-3xl lg:text-4xl font-bold leading-tight tracking-tight">
-                  Mais de <span className="text-primary italic">30 anos de pesquisas</span> apontam para a mesma direção
+                <h2 className="text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white">
+                  Mais de <span className="text-secondary italic">30 anos de pesquisas</span> sobre coluna
                 </h2>
                 <div className="space-y-4">
-                  <p className="text-white/40 text-base italic font-medium">
+                  <p className="text-white/60 text-base italic font-medium">
                     "O problema é conseguir aplicar isso na sua rotina."
                   </p>
-                  <p className="text-lg text-white/80 leading-relaxed font-semibold">
-                    O <span className="text-primary font-bold">SUPER COLUNA</span> transforma ciência em um programa simples e guiado.
+                  <p className="text-lg text-white/90 leading-relaxed font-semibold">
+                    O <span className="text-secondary font-bold">SUPER COLUNA</span> transforma esses princípios em um programa simples e guiado.
                   </p>
                 </div>
               </div>
@@ -556,16 +555,16 @@ export default function SuperColunaLanding() {
                     { label: "Reforço", icon: <Target className="w-5 h-5" /> },
                     { label: "Ritmo", icon: <History className="w-5 h-5" /> }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center justify-center space-y-3 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all group">
-                      <div className="text-primary group-hover:scale-110 transition-transform">{item.icon}</div>
+                    <div key={idx} className="flex flex-col items-center justify-center space-y-3 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-secondary/50 transition-all group">
+                      <div className="text-secondary group-hover:scale-110 transition-transform">{item.icon}</div>
                       <span className="text-[10px] font-black uppercase tracking-widest text-white/50">{item.label}</span>
                     </div>
                   ))}
                 </div>
 
-                <Button asChild size="lg" className="w-full h-16 rounded-full text-lg font-bold shadow-button group bg-primary hover:bg-primary/90 active:scale-95 transition-all">
+                <Button asChild size="lg" variant="secondary" className="w-full h-16 rounded-full text-lg font-bold shadow-button group active:scale-95 transition-all">
                   <Link href={checkoutUrl}>
-                    Ativar meu acesso
+                    Ativar meu acesso agora
                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
@@ -578,8 +577,8 @@ export default function SuperColunaLanding() {
         <section className="py-20 bg-white overflow-hidden border-b border-slate-50">
           <div className="section-container">
             <div className="text-center mb-12 space-y-3">
-              <p className="text-primary font-black uppercase tracking-[0.2em] text-[10px]">RECONHECIMENTO REAL</p>
-              <h2 className="font-headline text-2xl lg:text-4xl font-bold tracking-tight text-slate-900">Histórias de quem retomou a liberdade</h2>
+              <p className="text-secondary font-black uppercase tracking-[0.2em] text-[10px]">RECONHECIMENTO REAL</p>
+              <h2 className="text-2xl lg:text-4xl font-bold tracking-tight">Histórias de quem retomou a liberdade</h2>
             </div>
             
             <Carousel 
@@ -595,18 +594,18 @@ export default function SuperColunaLanding() {
                   <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 pl-4">
                     <Card className="h-full border-none shadow-premium bg-ghost-grey rounded-[2rem] p-8 space-y-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500">
                       <div className="space-y-4">
-                        <div className="flex gap-1 text-primary">
+                        <div className="flex gap-1 text-secondary">
                           {[...Array(t.stars)].map((_, idx) => (
-                            <Star key={idx} className="w-4 h-4 fill-primary" />
+                            <Star key={idx} className="w-4 h-4 fill-secondary" />
                           ))}
                         </div>
-                        <Quote className="w-8 h-8 text-primary/10 rotate-180" />
+                        <Quote className="w-8 h-8 text-secondary/10 rotate-180" />
                         <p className="text-slate-700 font-medium leading-relaxed italic">
                           "{t.text}"
                         </p>
                       </div>
                       <div className="pt-6 border-t border-slate-200/60">
-                        <p className="font-bold text-slate-900">{t.name}</p>
+                        <p className="font-bold text-foreground">{t.name}</p>
                         <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">{t.role}</p>
                       </div>
                     </Card>
@@ -622,12 +621,12 @@ export default function SuperColunaLanding() {
           <div className="section-container">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <div className="space-y-10 text-center lg:text-left animate-fade-in-up">
-                <h2 className="font-headline text-3xl lg:text-5xl font-bold leading-tight text-slate-900 tracking-tight">
+                <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
                   Imagine voltar a confiar no seu corpo.
                 </h2>
                 <div className="space-y-6 text-xl text-slate-500 leading-relaxed font-medium">
                   <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
-                  <p className="font-bold text-slate-900 text-2xl italic">Sem ficar sentindo a lombar o tempo inteiro.</p>
+                  <p className="font-bold text-foreground text-2xl italic">Sem ficar sentindo a lombar o tempo inteiro.</p>
                   <p>Sem aquela sensação constante de rigidez que limita sua vida. Você vai começar a se sentir muito melhor do que se sente hoje.</p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5 text-left">
@@ -658,10 +657,10 @@ export default function SuperColunaLanding() {
         {/* FAQ */}
         <section className="py-24 lg:py-32 bg-white">
           <div className="section-container max-w-3xl">
-            <h2 className="font-headline text-3xl lg:text-4xl font-bold text-center mb-16 tracking-tight">Perguntas frequentes</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 tracking-tight">Perguntas frequentes</h2>
             <Accordion type="single" collapsible className="space-y-4">
               {[
-                { q: "Isso substitui acompanhamento profissional?", a: "Não. O SUPER COLUNA é um programa digital de apoio voltado para mobilidade e fortalecimento preventivo. Em casos específicos ou persistentes, procure orientação profissional." },
+                { q: "Isso substitui acompanhamento profissional?", a: "Não. O SUPER COLUNA é um programa digital focado em mobilidade e fortalecimento preventivo. Em casos específicos ou persistentes, procure orientação profissional." },
                 { q: "Preciso ter experiência com exercícios?", a: "Não. O programa foi desenvolvido para ser extremamente simples e intuitivo, feito para qualquer pessoa seguir." },
                 { q: "Quanto tempo por dia?", a: "Apenas alguns minutos. Nosso foco é facilitar a continuidade, não criar uma nova obrigação pesada." },
                 { q: "É um curso?", a: "Não. É um programa de acompanhamento diário dentro de um aplicativo premium, focado em jornada e consistência." }
@@ -676,21 +675,21 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-24 lg:py-32 bg-slate-900 text-white relative overflow-hidden">
+        <section className="py-20 lg:py-24 bg-primary text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 blur-[120px] rounded-full" />
           <div className="section-container relative z-10">
-            <div className="text-center space-y-8 mb-20 animate-fade-in-up">
-              <h2 className="font-headline text-3xl lg:text-6xl font-bold leading-tight tracking-tight">Quanto mais você adia,<br />mais <span className="text-primary">normal</span> isso parece.</h2>
+            <div className="text-center space-y-8 mb-16 animate-fade-in-up">
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight text-white">Quanto mais você adia,<br />mais <span className="text-secondary">normal</span> isso parece.</h2>
               <div className="space-y-4 max-w-2xl mx-auto">
                 <p className="text-lg lg:text-xl text-white/80 font-medium">Viver com o corpo rígido não deveria ser o seu novo normal.</p>
                 <p className="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">O SUPER COLUNA ajuda você a recuperar sua liberdade.</p>
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-stretch animate-fade-in-up">
-              {/* Left Side: Deliverables */}
-              <div className="space-y-10 bg-white/5 p-10 lg:p-12 rounded-[2.5rem] border border-white/5">
-                <h3 className="text-2xl font-bold text-primary tracking-tight">Ao ativar seu acesso, você recebe:</h3>
-                <div className="grid gap-6">
+            <div className="grid lg:grid-cols-2 gap-8 items-stretch animate-fade-in-up">
+              <div className="space-y-8 bg-white/5 p-8 lg:p-10 rounded-[2.5rem] border border-white/10">
+                <h3 className="text-xl font-bold text-secondary tracking-tight">Ao ativar seu acesso, você recebe:</h3>
+                <div className="grid gap-5">
                   {[
                     { title: "Aplicativo com Programa de 30 Dias", desc: "Rotina estruturada e sem complicação." },
                     { title: "Exercícios Diários em Vídeo", desc: "Aulas simples e fáceis de acompanhar." },
@@ -700,38 +699,35 @@ export default function SuperColunaLanding() {
                     { title: "Acesso Imediato", desc: "Comece agora pelo celular ou PC." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start group">
-                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
-                        <Check className="w-3.5 h-3.5 text-white stroke-[3px]" />
+                      <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-1 group-hover:scale-110 transition-transform">
+                        <Check className="w-3 h-3 text-white stroke-[3px]" />
                       </div>
                       <div>
-                        <h4 className="text-base font-bold text-white tracking-tight">{item.title}</h4>
-                        <p className="text-sm text-white/40 font-medium">{item.desc}</p>
+                        <h4 className="text-sm font-bold text-white tracking-tight">{item.title}</h4>
+                        <p className="text-xs text-white/40 font-medium">{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Right Side: Results */}
-              <div className="bg-white/10 border border-white/10 rounded-[2.5rem] p-10 lg:p-14 flex flex-col justify-between shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[60px] rounded-full" />
-                
-                <div className="space-y-8 relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-[0.2em] text-primary">Nos próximos 15 dias:</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+              <div className="bg-white/10 border border-white/10 rounded-[2.5rem] p-8 lg:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                <div className="space-y-6 relative z-10">
+                  <h3 className="text-lg font-bold text-secondary mb-4 uppercase tracking-[0.2em]">Nos próximos 15 dias:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                     {["✓ Mais mobilidade", "✓ Menos rigidez", "✓ Mais confiança", "✓ Mais liberdade", "✓ Rotina simples"].map((text, i) => (
-                      <span key={i} className="text-lg font-bold text-white/90 tracking-tight">{text}</span>
+                      <span key={i} className="text-base font-bold text-white/90 tracking-tight">{text}</span>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-12 space-y-8 pt-10 border-t border-white/10 relative z-10">
-                  <p className="text-lg text-white/70 leading-relaxed italic font-medium">
+                <div className="mt-10 space-y-6 pt-8 border-t border-white/10 relative z-10">
+                  <p className="text-base text-white/70 leading-relaxed italic font-medium">
                     "Daqui a 30 dias, você pode continuar como está ou agradecer por ter dado o primeiro passo hoje."
                   </p>
                   
                   <div className="space-y-5">
-                    <Button asChild size="lg" className="w-full h-18 py-8 rounded-full text-xl font-black shadow-button group bg-primary hover:bg-primary/90 active:scale-[0.98] transition-all">
+                    <Button asChild size="lg" variant="secondary" className="w-full h-18 py-8 rounded-full text-lg font-black shadow-button group active:scale-[0.98] transition-all">
                       <Link href={checkoutUrl}>
                         QUERO UMA SUPER COLUNA AGORA
                         <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-1" />
@@ -756,10 +752,10 @@ export default function SuperColunaLanding() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <Activity className="text-white w-5 h-5" />
             </div>
-            <span className="font-headline font-bold text-slate-900 tracking-tighter">SUPER COLUNA</span>
+            <span className="font-headline font-bold text-primary tracking-tighter">SUPER COLUNA</span>
           </div>
           <p className="text-xs font-semibold text-slate-400 max-w-md mx-auto leading-relaxed uppercase tracking-widest">
-            Este aplicativo é focado em mobilidade e fortalecimento preventivo. Resultados variam conforme a consistência. © 2024 Super Coluna.
+            Este aplicativo é focado em mobilidade e fortalecimento preventivo. © 2024 Super Coluna.
           </p>
         </div>
       </footer>
