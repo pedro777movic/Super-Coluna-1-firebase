@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,12 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from "@/components/ui/accordion";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi
+} from "@/components/ui/carousel";
 import { 
   Activity, 
   Zap, 
@@ -26,11 +32,64 @@ import {
   ShieldCheck,
   History,
   Target,
-  Award
+  Award,
+  Quote,
+  Star
 } from "lucide-react";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { generateSpinalAnalysis, type PersonalizedSpinalAnalysisOutput } from "@/ai/flows/generate-spinal-analysis";
 import { cn } from "@/lib/utils";
+
+const testimonials = [
+  {
+    name: "Carlos Roberto",
+    role: "54 anos, Empresário",
+    text: "Parei de calcular cada movimento. A liberdade de simplesmente levantar do sofá sem sentir aquele 'fisgar' na lombar não tem preço. O programa é cirúrgico.",
+    stars: 5
+  },
+  {
+    name: "Ana Martins",
+    role: "39 anos, Arquiteta",
+    text: "O sistema é tão simples que no começo duvidei. 15 dias seguindo os vídeos e a rigidez matinal que me acompanhava há anos simplesmente sumiu.",
+    stars: 5
+  },
+  {
+    name: "Roberto Silveira",
+    role: "62 anos, Aposentado",
+    text: "Voltei a brincar com meus netos no chão. O Super Coluna me devolveu momentos que eu achei que tinham ficado no passado por causa da idade.",
+    stars: 5
+  },
+  {
+    name: "Juliana Farias",
+    role: "42 anos, Advogada",
+    text: "Dirigir por 2 horas costumava ser um pesadelo. Hoje faço viagens longas e chego ao destino inteira, sem precisar de remédios para dor.",
+    stars: 5
+  },
+  {
+    name: "Marcos Torres",
+    role: "45 anos, Desenvolvedor",
+    text: "Trabalho sentado o dia todo. O Super Coluna virou meu ritual de liberdade. Acordo sem medo de 'travar' e meu rendimento no trabalho até melhorou.",
+    stars: 5
+  },
+  {
+    name: "Beatriz Lemos",
+    role: "31 anos, Professora",
+    text: "A sensação de segurança que o fortalecimento me deu é incrível. Perdi o medo de fazer movimentos básicos e voltei a me sentir jovem e leve.",
+    stars: 5
+  },
+  {
+    name: "Ricardo Prado",
+    role: "50 anos, Motorista",
+    text: "Eu vivia à base de anti-inflamatórios. Seguir o sistema guiado foi a única coisa que trouxe alívio real e duradouro. É um investimento na vida.",
+    stars: 5
+  },
+  {
+    name: "Fernanda G.",
+    role: "37 anos, Designer",
+    text: "A clareza dos exercícios é o diferencial. Você sabe exatamente o que fazer e sente a evolução a cada dia. Minha lombar nunca esteve tão forte.",
+    stars: 5
+  }
+];
 
 export default function SuperColunaLanding() {
   const checkoutUrl = "https://pay.kiwify.com.br/yc50tcH";
@@ -41,6 +100,7 @@ export default function SuperColunaLanding() {
   const [quizResult, setQuizResult] = useState<PersonalizedSpinalAnalysisOutput | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
   
   const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
   const appEvolutionImg = PlaceHolderImages?.find(img => img.id === "app-evolution")?.imageUrl;
@@ -54,6 +114,15 @@ export default function SuperColunaLanding() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Auto-play logic for carousel
+  useEffect(() => {
+    if (!api) return;
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+    return () => clearInterval(intervalId);
+  }, [api]);
 
   const handleStartQuiz = () => {
     document.getElementById("quiz-section")?.scrollIntoView({ behavior: "smooth" });
@@ -502,6 +571,49 @@ export default function SuperColunaLanding() {
                 </Button>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS CAROUSEL */}
+        <section className="py-20 bg-white overflow-hidden border-b border-slate-50">
+          <div className="section-container">
+            <div className="text-center mb-12 space-y-3">
+              <p className="text-primary font-black uppercase tracking-[0.2em] text-[10px]">RECONHECIMENTO REAL</p>
+              <h2 className="font-headline text-2xl lg:text-4xl font-bold tracking-tight text-slate-900">Histórias de quem retomou a liberdade</h2>
+            </div>
+            
+            <Carousel 
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
+              <CarouselContent>
+                {testimonials.map((t, i) => (
+                  <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 pl-4">
+                    <Card className="h-full border-none shadow-premium bg-ghost-grey rounded-[2rem] p-8 space-y-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500">
+                      <div className="space-y-4">
+                        <div className="flex gap-1 text-primary">
+                          {[...Array(t.stars)].map((_, idx) => (
+                            <Star key={idx} className="w-4 h-4 fill-primary" />
+                          ))}
+                        </div>
+                        <Quote className="w-8 h-8 text-primary/10 rotate-180" />
+                        <p className="text-slate-700 font-medium leading-relaxed italic">
+                          "{t.text}"
+                        </p>
+                      </div>
+                      <div className="pt-6 border-t border-slate-200/60">
+                        <p className="font-bold text-slate-900">{t.name}</p>
+                        <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">{t.role}</p>
+                      </div>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </section>
 
