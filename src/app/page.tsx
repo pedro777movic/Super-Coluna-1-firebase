@@ -102,8 +102,8 @@ export default function SuperColunaLanding() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
   
-  const appHomeImg = PlaceHolderImages?.find(img => img.id === "app-home")?.imageUrl;
-  const appEvolutionImg = PlaceHolderImages?.find(img => img.id === "app-evolution")?.imageUrl;
+  const appHomeImg = "https://i.postimg.cc/0QYLm3tP/IMG-20260613-WA0073.jpg";
+  const appEvolutionImg = "https://i.postimg.cc/TPYyZMDs/Chat-GPT-Image-13-06-2026-17-27-18.png";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -211,21 +211,21 @@ export default function SuperColunaLanding() {
                 <Sparkles className="w-3 h-3" />
                 <span>EXCLUSIVO SUPER COLUNA</span>
               </div>
-              <h1 className="text-4xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-                Sua lombar está <span className="text-secondary italic">roubando da sua vida</span> mais do que você imagina.
+              <h1 className="text-4xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground">
+                Sua lombar está <span className="text-secondary italic">roubando a sua vida</span> e envelhecendo seu corpo anos antes do tempo.
               </h1>
               <p className="text-lg lg:text-2xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
-                A cada dia que passa, o desconforto parece mais normal. Mas viver com limitações não deveria fazer parte da sua rotina.
+                A cada dia que passa, você aceita a dor como se fosse normal. Mas a verdade é cruel: viver limitado, sentindo-se refém do próprio corpo, é uma escolha que está te custando caro demais.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center pt-4">
                 <Button asChild size="lg" variant="secondary" className="h-16 px-10 text-lg font-bold rounded-full group shadow-button active:scale-95 transition-all">
                   <Link href={checkoutUrl}>
-                    Começar agora
+                    Blindar minha coluna agora
                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="h-16 px-10 text-lg font-bold rounded-full border-2 border-slate-200 hover:bg-slate-50 active:scale-95 transition-all text-primary" onClick={handleStartQuiz}>
-                  Entender meu caso
+                  Diagnóstico do meu caso
                 </Button>
               </div>
             </div>
@@ -238,17 +238,17 @@ export default function SuperColunaLanding() {
             <div className="text-center mb-16 space-y-4 animate-fade-in-up">
               <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">Isso soa familiar para você?</h2>
               <p className="text-slate-500 text-lg lg:text-xl max-w-2xl mx-auto font-medium">
-                Quando a lombar reclama, ela muda silenciosamente a forma como você vive o seu dia.
+                Quando a sua lombar falha, ela dita as regras de como você deve viver, transformando tarefas simples em tortura diária.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
-                "Acorda sentindo o corpo rígido e demora para 'aquecer'",
-                "Precisa mudar de posição constantemente para encontrar conforto",
-                "Evita alguns movimentos porque sabe que vai sentir desconforto",
-                "Sente que sua mobilidade já não é a mesma de antes",
-                "Tem a sensação de que está se adaptando cada vez mais às limitações",
-                "Desconforto persistente após longos períodos sentado"
+                "Acorda com o corpo travado, rígido, sentindo-se um idoso de 80 anos até o corpo 'aquecer'",
+                "Precisa se mexer na cadeira a cada 5 minutos porque nenhuma posição alivia o incômodo",
+                "Deixou de fazer movimentos simples ou hobbies que ama por medo real de 'travar' a coluna",
+                "Sente que sua agilidade e vigor sumiram, dando lugar a um corpo pesado e cansado",
+                "Percebeu que sua vida diminuiu para caber dentro das suas limitações físicas",
+                "Sentar por mais de uma hora se tornou um teste de resistência física e mental"
               ].map((text, i) => (
                 <div key={i} className="flex gap-4 p-7 bg-white rounded-[2rem] shadow-premium border border-white items-start hover:border-secondary/20 transition-all hover:-translate-y-1 group">
                   <div className="w-7 h-7 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-0.5 group-hover:bg-secondary group-hover:text-white transition-colors">
@@ -269,10 +269,10 @@ export default function SuperColunaLanding() {
             </h2>
             <div className="space-y-6">
               <p className="text-2xl lg:text-3xl text-slate-400 leading-relaxed font-medium">
-                É o fato de você começar a considerá-la <span className="text-foreground font-bold decoration-secondary decoration-4 underline-offset-8">normal.</span>
+                É a negligência de você começar a achar que isso é <span className="text-foreground font-bold decoration-secondary decoration-4 underline-offset-8">normal.</span>
               </p>
               <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
-                Viver se adaptando a restrições rouba sua liberdade pouco a pouco. Adaptar-se à limitação não é o mesmo que resolvê-la.
+                Cada dia que você passa se adaptando à dor é um dia a menos de liberdade. Aceitar a limitação não é maturidade; é desistir de viver com dignidade.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function SuperColunaLanding() {
                     </div>
                     <div className="space-y-3">
                       <h2 className="text-3xl font-bold tracking-tight">Diagnóstico de Perfil</h2>
-                      <p className="text-slate-500 font-medium text-lg">3 perguntas rápidas para analisarmos seu caso.</p>
+                      <p className="text-slate-500 font-medium text-lg">3 perguntas cruciais para avaliarmos a gravidade do seu caso.</p>
                     </div>
                     <Button size="lg" variant="secondary" className="w-full rounded-full h-16 text-lg font-bold shadow-button active:scale-[0.98] transition-all" onClick={() => setQuizStep(1)}>
                       Iniciar Avaliação (15s)
@@ -362,7 +362,7 @@ export default function SuperColunaLanding() {
                       <div className="absolute inset-0 border-4 border-secondary border-t-transparent rounded-full animate-spin" />
                     </div>
                     <div className="space-y-3">
-                      <h3 className="text-2xl font-bold">Analisando seu perfil...</h3>
+                      <h3 className="text-2xl font-bold">Analisando gravidade...</h3>
                       <p className="text-slate-500 font-medium">Cruzando dados de mobilidade e impacto rotineiro.</p>
                     </div>
                   </div>
@@ -416,16 +416,16 @@ export default function SuperColunaLanding() {
         <section id="revelation" className="py-24 bg-white">
           <div className="section-container max-w-3xl text-center space-y-10 animate-fade-in-up">
             <h2 className="text-3xl lg:text-5xl font-bold leading-[1.15] tracking-tight">
-              A boa notícia é que você não precisa resolver isso sozinho.
+              A boa notícia é que você está a um passo de dar um basta definitivo nisso.
             </h2>
             <div className="space-y-6 text-xl text-slate-500 leading-relaxed font-medium">
-              <p>Agora imagine ter um plano simples para começar a mudar isso.</p>
-              <p>Você não precisa ficar procurando exercícios aleatórios ou tentando descobrir o que fazer a cada dia.</p>
-              <p>Tudo fica mais fácil quando existe um sistema claro para seguir.</p>
+              <p>Agora imagine ter o mapa exato para recuperar as rédeas da sua vida física.</p>
+              <p>Chega de perder tempo no YouTube procurando exercícios aleatórios que podem piorar sua situação ou de gastar fortunas com remédios que apenas mascaram o problema.</p>
+              <p>O caos da dor termina onde um sistema científico e testado começa.</p>
             </div>
             <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-inner">
               <p className="text-foreground font-bold text-lg lg:text-xl leading-relaxed">
-                Você não precisa continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
+                Você não foi feito para viver quebrado. E se a blindagem completa da sua lombar fosse apenas uma questão de seguir o método exato do nosso aplicativo especializado?
               </p>
             </div>
           </div>
@@ -435,27 +435,27 @@ export default function SuperColunaLanding() {
         <section className="py-24 lg:py-32 bg-ghost-grey">
           <div className="section-container">
             <div className="text-center mb-20 space-y-4 animate-fade-in-up">
-              <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">A solução: SUPER COLUNA</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">A solução definitiva: SUPER COLUNA</h2>
               <p className="text-slate-500 text-lg lg:text-xl max-w-2xl mx-auto font-medium">
-                Desenvolvemos um sistema que elimina a dor lombar a partir de exercícios simples de baixo esforço.
+                Desenvolvemos o único sistema de engenharia corporal focado em eliminar a dor lombar através de estímulos biomegânicos de altíssima eficiência e baixo esforço.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
               {[
                 { 
-                  t: "Mais mobilidade", 
-                  d: "Volte a se mover com mais confiança e menos rigidez. Recupere movimentos que antes eram naturais.", 
+                  t: "Mobilidade Absoluta", 
+                  d: "Recupere a amplitude de movimento que você achou que tinha perdido para sempre. Mova-se com a segurança de um jovem.", 
                   icon: <Zap className="w-7 h-7" /> 
                 },
                 { 
-                  t: "Mais leveza", 
-                  d: "Sinta seu corpo responder melhor aos movimentos do dia a dia. Menos esforço para fazer o simples.", 
+                  t: "Leveza Descomplicada", 
+                  d: "Elimine o peso morto da inflamação crônica. Seu corpo vai responder aos comandos do dia a dia com fluidez instantânea.", 
                   icon: <Sparkles className="w-7 h-7" /> 
                 },
                 { 
-                  t: "Mais liberdade", 
-                  d: "Passe menos tempo pensando na lombar e mais tempo vivendo sua rotina. Livre do peso da restrição.", 
+                  t: "Liberdade Inegociável", 
+                  d: "Zere o relógio do medo. Esqueça que você tem uma coluna e volte a focar no seu trabalho, na sua família e no seu lazer.", 
                   icon: <ShieldCheck className="w-7 h-7" /> 
                 }
               ].map((feature, i) => (
@@ -490,23 +490,23 @@ export default function SuperColunaLanding() {
               <div className="space-y-12 lg:order-1 animate-fade-in-up">
                 <div className="space-y-4">
                   <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">Simples e prático</h2>
-                  <p className="text-slate-500 text-lg font-medium">A jornada para sua liberdade de movimento em 3 passos:</p>
+                  <p className="text-slate-500 text-lg font-medium">O protocolo definitivo para sua liberdade física em 3 etapas:</p>
                 </div>
                 <div className="space-y-10">
                   {[
                     { 
-                      s: "1. Entre no aplicativo", 
-                      d: "Saiba exatamente o que fazer. Sem dúvidas sobre os exercícios que resolverão a dor lombar.",
+                      s: "1. Acesse a plataforma", 
+                      d: "Direto ao ponto. Você saberá exatamente qual botão apertar e qual ação tomar para desinflamar sua lombar hoje.",
                       icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     },
                     { 
-                      s: "2. Siga os exercícios", 
-                      d: "Poucos minutos por dia. Vídeos rápidos e guiados que cabem na sua rotina.",
+                      s: "2. Execute o protocolo diário", 
+                      d: "Apenas alguns minutos. Vídeos em alta definição, guiados passo a passo, projetados para se encaixarem na rotina de pessoas ocupadas.",
                       icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     },
                     { 
-                      s: "3. Sinta sua evolução", 
-                      d: "Sinta sua lombar melhorar e seu corpo cada vez menos rígido a cada dia.",
+                      s: "3. Sinta o alívio imediato", 
+                      d: "Acompanhe a rigidez indo embora logo nas primeiras sessões enquanto sua coluna retoma a estabilidade perdida.",
                       icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     }
                   ].map((item, i) => (
@@ -536,14 +536,14 @@ export default function SuperColunaLanding() {
                   <Award className="w-3.5 h-3.5 text-secondary" /> CIÊNCIA APLICADA
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white">
-                  Mais de <span className="text-secondary italic">30 anos de pesquisas</span> sobre coluna
+                  Mais de <span className="text-secondary italic">30 anos de evidências científicas</span> sobre a saúde da coluna
                 </h2>
                 <div className="space-y-4">
                   <p className="text-white/60 text-base italic font-medium">
-                    "O problema é conseguir aplicar isso na sua rotina."
+                    "O grande desafio nunca foi a ciência, mas sim como integrá-la à rotina de forma prática."
                   </p>
                   <p className="text-lg text-white/90 leading-relaxed font-semibold">
-                    O <span className="text-secondary font-bold">SUPER COLUNA</span> transforma esses princípios em um programa simples e guiado.
+                    O <span className="text-secondary font-bold">SUPER COLUNA</span> traduz décadas de estudos clínicos em um passo a passo automatizado, seguro e infalível.
                   </p>
                 </div>
               </div>
@@ -551,13 +551,13 @@ export default function SuperColunaLanding() {
               <div className="flex-1 w-full max-w-lg space-y-8">
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { label: "Movimento", icon: <Activity className="w-5 h-5" /> },
-                    { label: "Reforço", icon: <Target className="w-5 h-5" /> },
-                    { label: "Ritmo", icon: <History className="w-5 h-5" /> }
+                    { label: "Movimento Estruturado", icon: <Activity className="w-5 h-5" /> },
+                    { label: "Reforço Clínico", icon: <Target className="w-5 h-5" /> },
+                    { label: "Ritmo Progressivo", icon: <History className="w-5 h-5" /> }
                   ].map((item, idx) => (
                     <div key={idx} className="flex flex-col items-center justify-center space-y-3 p-5 rounded-3xl bg-white/5 border border-white/10 hover:border-secondary/50 transition-all group">
                       <div className="text-secondary group-hover:scale-110 transition-transform">{item.icon}</div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-white/50">{item.label}</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-white/50 text-center">{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -578,7 +578,7 @@ export default function SuperColunaLanding() {
           <div className="section-container">
             <div className="text-center mb-12 space-y-3">
               <p className="text-secondary font-black uppercase tracking-[0.2em] text-[10px]">RECONHECIMENTO REAL</p>
-              <h2 className="text-2xl lg:text-4xl font-bold tracking-tight">Histórias de quem retomou a liberdade</h2>
+              <h2 className="text-2xl lg:text-4xl font-bold tracking-tight">Resultados incontestáveis de quem recuperou a autonomia física</h2>
             </div>
             
             <Carousel 
@@ -622,21 +622,21 @@ export default function SuperColunaLanding() {
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <div className="space-y-10 text-center lg:text-left animate-fade-in-up">
                 <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
-                  Imagine voltar a confiar no seu corpo.
+                  Imagine voltar a ter controle total sobre o seu corpo.
                 </h2>
                 <div className="space-y-6 text-xl text-slate-500 leading-relaxed font-medium">
-                  <p>Levantar. Caminhar. Dirigir. Trabalhar. Se movimentar.</p>
-                  <p className="font-bold text-foreground text-2xl italic">Sem ficar sentindo a lombar o tempo inteiro.</p>
-                  <p>Sem aquela sensação constante de rigidez que limita sua vida. Você vai começar a se sentir muito melhor do que se sente hoje.</p>
+                  <p>Levantar num salto. Caminhar quilômetros. Dirigir por horas. Pegar peso sem medo.</p>
+                  <p className="font-bold text-foreground text-2xl italic">Sem que a sua mente seja refém do medo de travar.</p>
+                  <p>Sem aquela névoa constante de cansaço e rigidez que sabota o seu humor e o seu dia. Você está a poucos dias de experimentar um vigor físico que nem lembrava que existia.</p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5 text-left">
                   <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-premium border border-white hover:border-secondary/20 transition-all">
                     <Check className="w-6 h-6 text-secondary shrink-0 stroke-[3px]" />
-                    <p className="text-base lg:text-lg font-bold text-slate-800">Foque na vida, não na dor.</p>
+                    <p className="text-base lg:text-lg font-bold text-slate-800">Foque na sua vida, destrua a dor.</p>
                   </div>
                   <div className="flex gap-4 items-start p-6 bg-white rounded-3xl shadow-premium border border-white hover:border-secondary/20 transition-all">
                     <Check className="w-6 h-6 text-secondary shrink-0 stroke-[3px]" />
-                    <p className="text-base lg:text-lg font-bold text-slate-800">Recupere a leveza do corpo.</p>
+                    <p className="text-base lg:text-lg font-bold text-slate-800">Recupere a máquina que é o seu corpo.</p>
                   </div>
                 </div>
               </div>
@@ -679,24 +679,24 @@ export default function SuperColunaLanding() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 blur-[120px] rounded-full" />
           <div className="section-container relative z-10">
             <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight text-white">Quanto mais você adia,<br />mais <span className="text-secondary">normal</span> isso parece.</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight tracking-tight text-white">Quanto mais você adia a decisão,<br />mais <span className="text-secondary">crônica</span> a sua dor se torna.</h2>
               <div className="space-y-4 max-w-2xl mx-auto">
-                <p className="text-lg lg:text-xl text-white/80 font-medium">Viver com o corpo rígido não deveria ser o seu novo normal.</p>
-                <p className="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">O SUPER COLUNA ajuda você a recuperar sua liberdade.</p>
+                <p className="text-lg lg:text-xl text-white/80 font-medium">Viver preso em um corpo travado não é uma fatalidade, é uma negligência com você mesmo.</p>
+                <p className="text-white/40 text-sm font-bold uppercase tracking-[0.2em]">O SUPER COLUNA é a ferramenta definitiva que vai restaurar sua autonomia.</p>
               </div>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 items-stretch animate-fade-in-up">
               <div className="space-y-8 bg-white/5 p-8 lg:p-10 rounded-[2.5rem] border border-white/10">
-                <h3 className="text-xl font-bold text-secondary tracking-tight">Ao ativar seu acesso, você recebe:</h3>
+                <h3 className="text-xl font-bold text-secondary tracking-tight">Ao ativar seu acesso hoje, você recebe:</h3>
                 <div className="grid gap-5">
                   {[
-                    { title: "Aplicativo com Programa de 30 Dias", desc: "Rotina estruturada e sem complicação." },
-                    { title: "Exercícios Diários em Vídeo", desc: "Aulas simples e fáceis de acompanhar." },
-                    { title: "Acompanhamento de Evolução", desc: "Visualize seu progresso diário." },
-                    { title: "Sistema de Conquistas", desc: "Pequenas vitórias motivadoras." },
-                    { title: "Área \"Entenda Sua Coluna\"", desc: "Vídeos educativos exclusivos." },
-                    { title: "Acesso Imediato", desc: "Comece agora pelo celular ou PC." }
+                    { title: "Aplicativo com o Protocolo de Choque de 30 Dias", desc: "A rota exata, estruturada e blindada contra falhas." },
+                    { title: "Aulas Diárias de Alta Performance em Vídeo", desc: "Execuções cirúrgicas, simples de entender e impossíveis de errar." },
+                    { title: "Painel de Evolução Biométrica", desc: "Monitore matematicamente a melhora da sua mobilidade." },
+                    { title: "Sistema de Recompensas e Consistência", desc: "A neurociência aplicada para garantir que você não desista do processo." },
+                    { title: "Módulo Master: \"A Anatomia da Dor\"", desc: "O conhecimento estratégico para nunca mais ser enganado por crises." },
+                    { title: "Acesso Instantâneo e Vitalício à Plataforma", desc: "Comece agora pelo celular, tablet ou computador." }
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start group">
                       <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center shrink-0 mt-1 group-hover:scale-110 transition-transform">
@@ -713,9 +713,9 @@ export default function SuperColunaLanding() {
 
               <div className="bg-white/10 border border-white/10 rounded-[2.5rem] p-8 lg:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden">
                 <div className="space-y-6 relative z-10">
-                  <h3 className="text-lg font-bold text-secondary mb-4 uppercase tracking-[0.2em]">Nos próximos 15 dias:</h3>
+                  <h3 className="text-lg font-bold text-secondary mb-4 uppercase tracking-[0.2em]">Nas próximas 2 semanas:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-                    {["✓ Mais mobilidade", "✓ Menos rigidez", "✓ Mais confiança", "✓ Mais liberdade", "✓ Rotina simples"].map((text, i) => (
+                    {["✓ Destravamento imediato", "✓ Fim da rigidez matinal", "✓ Confiança inabalável", "✓ Liberdade física", "✓ Método no piloto automático"].map((text, i) => (
                       <span key={i} className="text-base font-bold text-white/90 tracking-tight">{text}</span>
                     ))}
                   </div>
@@ -723,7 +723,7 @@ export default function SuperColunaLanding() {
 
                 <div className="mt-10 space-y-6 pt-8 border-t border-white/10 relative z-10">
                   <p className="text-base text-white/70 leading-relaxed italic font-medium">
-                    "Daqui a 30 dias, você pode continuar como está ou agradecer por ter dado o primeiro passo hoje."
+                    "Daqui a 30 dias, você pode continuar lidando com as mesmas dores, limitações e frustrações... ou pode olhar para trás e agradecer por ter tomado a única decisão inteligente possível hoje."
                   </p>
                   
                   <div className="space-y-5">
