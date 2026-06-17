@@ -37,16 +37,17 @@ const personalizedSpinalAnalysisPrompt = ai.definePrompt({
   name: 'personalizedSpinalAnalysisPrompt',
   input: { schema: PersonalizedSpinalAnalysisInputSchema },
   output: { schema: PersonalizedSpinalAnalysisOutputSchema },
-  prompt: `You are an expert in spinal health for the "SUPER COLUNA" app.
-  The user reported:
-  - Main Discomfort: {{{mainDiscomfort}}}
-  - Duration: {{{duration}}}
-  - Routine Impact: {{{routineImpact}}}
+  prompt: `Você é um especialista em saúde da coluna para o aplicativo "SUPER COLUNA".
+  O usuário relatou:
+  - Desconforto Principal: {{{mainDiscomfort}}}
+  - Duração: {{{duration}}}
+  - Impacto na Rotina: {{{routineImpact}}}
 
-  Generate a personalized, premium analysis. Focus on the concept that living with discomfort should not be considered "normal".
-  Address how the body starts to adapt to stiffness and how that steals quality of life.
-  The tone should be sophisticated, premium, and deeply empathetic, making the user feel seen and understood.
-  Avoid medical diagnosis; focus on behavioral patterns and the emotional relief of recovery.`,
+  Gere uma análise personalizada e premium. Foque no conceito de que viver com desconforto não deve ser considerado "normal".
+  Aborde como o corpo começa a se adaptar à rigidez e como isso rouba a qualidade de vida.
+  O tom deve ser sofisticado, premium e profundamente empático, fazendo com que o usuário se sinta visto e compreendido.
+  Evite diagnósticos médicos; foque em padrões comportamentais e no alívio emocional da recuperação.
+  IMPORTANTE: Toda a sua resposta deve ser em Português (Brasil).`,
 });
 
 const personalizedSpinalAnalysisFlow = ai.defineFlow(
