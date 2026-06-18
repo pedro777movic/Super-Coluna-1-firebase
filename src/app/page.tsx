@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -36,7 +36,6 @@ import {
   Quote,
   Star
 } from "lucide-react";
-import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { generateSpinalAnalysis, type PersonalizedSpinalAnalysisOutput } from "@/ai/flows/generate-spinal-analysis";
 import { cn } from "@/lib/utils";
 
@@ -262,7 +261,7 @@ export default function SuperColunaLanding() {
         </section>
 
         {/* INVISIBLE ADAPTATION */}
-        <section className="py-24 bg-white overflow-hidden">
+        <section id="revelation" className="py-24 bg-white overflow-hidden">
           <div className="section-container max-w-3xl text-center space-y-8 animate-fade-in-up">
             <h2 className="text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
               O pior não é a rigidez.
@@ -272,7 +271,7 @@ export default function SuperColunaLanding() {
                 É a negligência de você começar a achar que isso é <span className="text-foreground font-bold decoration-secondary decoration-4 underline-offset-8">normal.</span>
               </p>
               <p className="text-lg lg:text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
-                Cada dia que você passa se adaptando à dor é um dia a menos de liberdade. Aceitar a limitação não é maturidade; é desistir de viver com dignidade.
+                Cada dia que você passa se adaptando à dor é um dia a menos de liberdade. Você não precise continuar vivendo assim. E se o retorno à uma lombar forte e saudável fosse uma questão de seguir o sistema do nosso simples aplicativo?
               </p>
             </div>
           </div>
@@ -400,7 +399,7 @@ export default function SuperColunaLanding() {
                     </div>
 
                     <Button variant="secondary" className="w-full h-16 rounded-full text-lg font-bold shadow-button group active:scale-[0.98] transition-all" onClick={() => {
-                      document.getElementById("revelation")?.scrollIntoView({ behavior: "smooth" });
+                      document.getElementById("revelation-message")?.scrollIntoView({ behavior: "smooth" });
                     }}>
                       Revelar a causa real
                       <ArrowDown className="ml-2 w-5 h-5 animate-bounce group-hover:animate-none" />
@@ -412,8 +411,8 @@ export default function SuperColunaLanding() {
           </div>
         </section>
 
-        {/* REVELATION */}
-        <section id="revelation" className="py-24 bg-white">
+        {/* REVELATION MESSAGE */}
+        <section id="revelation-message" className="py-24 bg-white">
           <div className="section-container max-w-3xl text-center space-y-10 animate-fade-in-up">
             <h2 className="text-3xl lg:text-5xl font-bold leading-[1.15] tracking-tight">
               A boa notícia é que você está a um passo de dar um basta definitivo nisso.
@@ -495,7 +494,7 @@ export default function SuperColunaLanding() {
                 <div className="space-y-10">
                   {[
                     { 
-                      s: "1. Acesse a plataforma", 
+                      s: "1. Acesse o aplicativo", 
                       d: "Direto ao ponto. Você saberá exatamente qual botão apertar e qual ação tomar para desinflamar sua lombar hoje.",
                       icon: <CheckCircle2 className="w-7 h-7 text-secondary" />
                     },
@@ -539,8 +538,8 @@ export default function SuperColunaLanding() {
                   Mais de <span className="text-secondary italic">30 anos de evidências científicas</span> sobre a saúde da coluna
                 </h2>
                 <div className="space-y-4">
-                  <p className="text-white/60 text-base italic font-medium">
-                    "O grande desafio nunca foi a ciência, mas sim como integrá-la à rotina de forma prática."
+                  <p className="text-white/40 text-sm italic font-medium">
+                    "O problema é conseguir aplicar isso na sua rotina."
                   </p>
                   <p className="text-lg text-white/90 leading-relaxed font-semibold">
                     O <span className="text-secondary font-bold">SUPER COLUNA</span> traduz décadas de estudos clínicos em um passo a passo automatizado, seguro e infalível.
